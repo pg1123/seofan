@@ -180,7 +180,7 @@ else
 }
 
 //模板的存放目录
-$cfg_templets_dir = $cfg_cmspath.'/member/templets';
+$cfg_templets_dir = $cfg_cmspath.'/templets';
 $cfg_templeturl = $cfg_mainsite.$cfg_templets_dir;
 $cfg_templets_skin = empty($cfg_df_style)? $cfg_mainsite.$cfg_templets_dir."/default" : $cfg_mainsite.$cfg_templets_dir."/$cfg_df_style";
 
