@@ -27,6 +27,7 @@ if(isset($_GET['upcache']) || !file_exists('index.html'))
     $row['showmod'] = isset($row['showmod'])? $row['showmod'] : 0;
     if ($row['showmod'] == 1)
     {
+        print_r(dirname(__FILE__));exit;
         $pv->SaveToHtml(dirname(__FILE__).'/index.html');
         include(dirname(__FILE__).'/index.html');
         exit();

@@ -314,9 +314,9 @@ class DedeTagParse
         $fp = fopen($this->CacheFile.'.txt',"w");
         fwrite($fp,$this->TempMkTime."\n");
         fclose($fp);
-        $fp = fopen($this->CacheFile,"w");
-        flock($fp,3);
-        fwrite($fp,'<'.'?php'."\r\n");
+        $fp = @fopen($this->CacheFile,"w");
+        @flock($fp,3);
+        @fwrite($fp,'<'.'?php'."\r\n");
         $errmsg = '';
         if(is_array($this->CTags))
         {
@@ -353,8 +353,8 @@ class DedeTagParse
                 }
             }
         }
-        fwrite($fp,"\n".'?'.'>');
-        fclose($fp);
+        @fwrite($fp,"\n".'?'.'>');
+        @fclose($fp);
     }
     
     /**

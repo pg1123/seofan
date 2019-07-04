@@ -1,0 +1,43 @@
+[03-Jul-2019 18:32:57 Asia/Chongqing] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /var/www/seofan/include/common.inc.php on line 295
+[03-Jul-2019 18:34:01 Asia/Chongqing] PHP Fatal error:  Cannot redeclare spl_autoload_register() in /var/www/seofan/include/common.inc.php on line 328
+[03-Jul-2019 18:34:11 Asia/Chongqing] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /var/www/seofan/include/common.inc.php on line 295
+[03-Jul-2019 22:32:48 Etc/GMT-8] PHP Warning:  fopen(): Filename cannot be empty in /var/www/seofan/include/dedetag.class.php on line 317
+[03-Jul-2019 22:32:48 Etc/GMT-8] PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 318
+[03-Jul-2019 22:32:48 Etc/GMT-8] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 319
+[03-Jul-2019 22:32:48 Etc/GMT-8] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 356
+[03-Jul-2019 22:32:48 Etc/GMT-8] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 357
+[03-Jul-2019 22:47:20 Etc/GMT-8] PHP Warning:  fopen(): Filename cannot be empty in /var/www/seofan/include/dedetag.class.php on line 318
+[03-Jul-2019 22:47:20 Etc/GMT-8] PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 319
+[03-Jul-2019 22:47:20 Etc/GMT-8] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 320
+[03-Jul-2019 22:47:20 Etc/GMT-8] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 357
+[03-Jul-2019 22:47:20 Etc/GMT-8] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 358
+[03-Jul-2019 22:47:45 Etc/GMT-8] PHP Warning:  fopen(): Filename cannot be empty in /var/www/seofan/include/dedetag.class.php on line 317
+[03-Jul-2019 22:47:45 Etc/GMT-8] PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 318
+[03-Jul-2019 22:47:45 Etc/GMT-8] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 319
+[03-Jul-2019 22:47:45 Etc/GMT-8] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 356
+[03-Jul-2019 22:47:45 Etc/GMT-8] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 357
+[03-Jul-2019 22:47:46 Etc/GMT-8] PHP Warning:  fopen(): Filename cannot be empty in /var/www/seofan/include/dedetag.class.php on line 317
+[03-Jul-2019 22:47:46 Etc/GMT-8] PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 318
+[03-Jul-2019 22:47:46 Etc/GMT-8] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 319
+[03-Jul-2019 22:47:46 Etc/GMT-8] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 356
+[03-Jul-2019 22:47:46 Etc/GMT-8] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 357
+[03-Jul-2019 22:49:26 Etc/GMT-8] PHP Warning:  fopen(): Filename cannot be empty in /var/www/seofan/include/dedetag.class.php on line 317
+[03-Jul-2019 22:49:26 Etc/GMT-8] PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 318
+[03-Jul-2019 22:49:26 Etc/GMT-8] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 319
+[03-Jul-2019 22:49:26 Etc/GMT-8] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 356
+[03-Jul-2019 22:49:26 Etc/GMT-8] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 357
+[03-Jul-2019 23:05:10 Etc/GMT-8] PHP Warning:  fopen(): Filename cannot be empty in /var/www/seofan/include/dedetag.class.php on line 317
+[03-Jul-2019 23:05:10 Etc/GMT-8] PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 318
+[03-Jul-2019 23:05:10 Etc/GMT-8] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 319
+[03-Jul-2019 23:05:10 Etc/GMT-8] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 356
+[03-Jul-2019 23:05:10 Etc/GMT-8] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 357
+[03-Jul-2019 23:07:45 Etc/GMT-8] PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 318
+[03-Jul-2019 23:07:45 Etc/GMT-8] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 319
+[03-Jul-2019 23:07:45 Etc/GMT-8] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 356
+[03-Jul-2019 23:07:45 Etc/GMT-8] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 357
+[03-Jul-2019 23:07:53 Etc/GMT-8] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 319
+[03-Jul-2019 23:07:53 Etc/GMT-8] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 356
+[03-Jul-2019 23:07:53 Etc/GMT-8] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 357
+[03-Jul-2019 23:07:59 Etc/GMT-8] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 356
+[03-Jul-2019 23:07:59 Etc/GMT-8] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 357
+[03-Jul-2019 23:08:05 Etc/GMT-8] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 357
