@@ -1,0 +1,147 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*移动端样式*/
+
+/*图片滚动*/
+@media(max-width:768px){
+	.webfbz{ display:none;}
+	
+	.fan-slider {
+    padding: 1px;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+    background-color: #fff;
+}
+.fan-slider .slide {
+    position: relative;
+}
+.fan-slider .flex-control-paging {
+    padding-top: 15px;
+    display: inline-block;
+    position: absolute;
+    bottom: 16px;
+	width:auto;
+}
+.fan-slider .flex-control-paging li {
+    margin: 0px;
+    padding: 0px;
+    float: left;
+    overflow: hidden;
+    list-style-type: none;
+}
+.fan-slider .flex-control-paging li a {
+    display: block;
+    background-repeat: no-repeat;
+    text-indent: -9000px;
+    cursor: pointer;
+}
+.fan-slider .flex-control-paging li a.flex-active {
+    background-position: right top;
+}
+.flexslider {
+    margin: 0;
+    padding: 0;
+}
+.flexslider .slides > li {
+    display: none;
+    -webkit-backface-visibility: hidden;
+    list-style-type: none;
+} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {
+    width: 100%;
+    display: block;
+}
+.flex-pauseplay span {
+    text-transform: capitalize;
+}
+
+/*头部导航*/
+.mbheader{ background-color:#2676cf; height:46px; line-height:46px; width:100%;}
+.mbheader h1{ color:#fff; font-size:20px; display:block; padding:0 15px; float:left;}
+.mbheader div{ float:right; width:70%; background-color:#fff; border-radius:40px; height:30px; margin-top:8px; margin-right:15px;}
+.mbheader input{ border:none; line-height:30px; padding-left:5%; width:70%; float:left;border-radius:40px 0 0 40px;}
+.mbheader button{ border:none; line-height:30px;  width:20%; background-color:#4bb5ff; float:right; border-radius:0 40px 40px 0; color:#fff;}
+.mbheader ul{ height:46px; background-color:#fff;}
+#mbheader ul li{ text-align:center; width:25%; line-height:46px; font-size:15px; float:left;}
+#mbheader ul .mbactive{ border-bottom:3px solid #2676cf; }
+#mbheader ul .mbactive a{color:#2676cf}
+
+.mbmain {
+    padding: 10px 15px;
+}
+.mbmain div h2 {
+    display: block;
+    float: left;
+    font-size: 16px;
+    border-left: 3px solid #ff4d5f;
+    padding-left: 10px;
+    height: 14px;
+    line-height: 14px;
+}
+.mbmain div span {
+    color: #999;
+    float: right;
+    font-size:13px;
+}
+.mbmain ul li {
+    padding: 20px 0;
+    border-bottom: 1px solid #e5e5e5;
+    position: relative;
+    height: 50px;
+}
+.mbmain ul li img {
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+.mbmain ul li h2 {
+    font-size: 14px;
+    font-weight: normal;
+}
+.mbmain ul li a p {
+    color: #999;
+    padding-top: 5px;
+}
+.mbmain ul li button {
+    position: absolute;
+    right: 0;
+    top: 32px;
+    background-color: #f3f3f3;
+    height: 28px;
+    border: none;
+    border-radius: 30px;
+    font-size: 14px;
+    color: #ff4d5f;
+    width: 70px;
+    font-weight: bold;
+}
+.mbmain ul li span {
+    color: #fff;
+    font-size: 10px;
+    background-color: #f59c62;
+    line-height: 16px;
+    border-radius: 0 10px 10px 10px;
+    padding: 2px 5px;
+    margin-left: 4px;
+}
+.mbmain ul li .sp1 {
+    background-color: #9593E4;
+}
+.mbmain h3 {
+    font-size: 12px;
+    text-align: center;
+    color: #999;
+    line-height: 36px;
+    border: 1px dashed #ccc;
+    font-weight: normal;
+    margin-top: 10px;
+}
+	}
