@@ -1,10 +1,10 @@
 <?php
 $cfg_disable_funs = 'phpinfo,eval,exec,passthru,shell_exec,system,proc_open,popen,curl_exec,curl_multi_exec,parse_ini_file,show_source,file_put_contents';
 $cfg_disable_tags = 'php';
-$cfg_basehost = 'http://fanbaozhuan.com';
-$cfg_cmspath = '/seofan';
+$cfg_basehost = 'http://seofan.local';
+$cfg_cmspath = '';
 $cfg_cookie_encode = 'gwvGk3GnHVM0wVpN2mBV8WYedBEdbh';
-$cfg_indexurl = '/seofan';
+$cfg_indexurl = '/';
 $cfg_backup_dir = 'backupdata';
 $cfg_indexname = '主页';
 $cfg_webname = '我的网站';
