@@ -567,6 +567,7 @@ class Archives
                 $tmpfile =str_replace('.htm','_m.htm',$tmpfile);
             }
         }
+        //print($tmpfile);exit;
         if (!preg_match("#.htm$#", $tmpfile)) return FALSE;
         return $tmpfile;
     }
@@ -627,8 +628,9 @@ class Archives
             $tempfile = $this->GetTempletFile();
             if(!file_exists($tempfile) || !is_file($tempfile))
             {
+                echo $tmpfile;
                 echo "文档ID：{$this->Fields['id']} - {$this->TypeLink->TypeInfos['typename']} - {$this->Fields['title']}<br />";
-                echo "模板文件不存在，无法解析文档！";
+                echo "模板文件不存在，无法解析文档！www";
                 exit();
             }
             $this->dtp->LoadTemplate($tempfile);
