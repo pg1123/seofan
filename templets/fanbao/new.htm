@@ -21,12 +21,10 @@
     <div id="nav" >
        <ul class="container clearfix">
           <li><a href="/">首页</a></li>
-          <li><a href="/apple">苹果赚钱</a></li>
-          <li><a href="/android">安卓赚钱</a></li>
-          <li><a href="/other">其他赚钱</a></li>
-          <li><a href="/zixun">赚钱方法</a></li>
-          <li class="nactive"><a href="/new">最新手赚</a></li>
-          <!-- <li><a href="/hz">商务合作</a></li> -->
+          <li class="nactive"><a href="/">首页</a></li>
+          {dede:channel row="10" type="top" col="1" currentstyle="<li class='hover'><a href='~typelink~' ~rel~><span>~typename~</span></a></li>" }
+            <li><a href='[field:typeurl/]' [field:rel/]><span>[field:typename/]</span></a></li>
+          {/dede:channel}
        </ul>
     </div>
 	<div class="container new">

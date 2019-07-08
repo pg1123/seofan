@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>苹果手机赚钱软件和APP试玩平台资讯-饭宝赚-苹果手机赚钱软件-兼职赚钱网站</title>
-<meta name="keywords" content="安卓手机赚钱软件,手机赚钱软件哪个好,手机赚钱软件排行榜">
-<meta name="description" content="手机赚钱软件哪个好？饭宝赚安卓手机赚钱软件专区为大家提供安卓手机赚钱软件排行榜推荐下载。无聊了怎么办，饭宝赚教你动动手指，就能轻松赚钱!">
+<title>{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:global.cfg_keywords/}">
+<meta name="description" content="{dede:global.cfg_description/}">
 <link href="{dede:global.cfg_templets_skin/}/css/style.css" rel="stylesheet" media="screen" type="text/css" />
 <link href="{dede:global.cfg_templets_skin/}/css/mobilecss.css" rel="stylesheet" media="screen" type="text/css" />
 </head>
@@ -25,12 +25,16 @@
     </div>
     <div id="nav" >
       <ul class="container clearfix">
-        <li class="nactive"><a href="/">首页</a></li>
+      <li class="nactive"><a href="/">首页</a></li>
+      {dede:channel row="10" type="top" col="1" currentstyle="<li class='hover'><a href='~typelink~' ~rel~><span>~typename~</span></a></li>" }
+        <li><a href='[field:typeurl/]' [field:rel/]><span>[field:typename/]</span></a></li>
+      {/dede:channel}
+        <!-- <li class="nactive"><a href="/">首页</a></li>
         <li><a href="/apple">苹果赚钱</a></li>
         <li><a href="/android">安卓赚钱</a></li>
         <li><a href="/other">其他赚钱</a></li>
         <li><a href="/zixun">赚钱方法</a></li>
-        <li><a href="/new">最新手赚</a></li>
+        <li><a href="/new">最新手赚</a></li> -->
         <!-- <li><a href="/hz">商务合作</a></li> -->
       </ul>
     </div>
