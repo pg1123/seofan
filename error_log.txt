@@ -41,3 +41,9 @@
 [03-Jul-2019 23:07:59 Etc/GMT-8] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 356
 [03-Jul-2019 23:07:59 Etc/GMT-8] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 357
 [03-Jul-2019 23:08:05 Etc/GMT-8] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 357
+[09-Jul-2019 21:03:08 Etc/GMT-8] PHP Warning:  fopen(/var/www/seofan/data/tplcache//index.htm717d4059e812e610.inc.txt): failed to open stream: Permission denied in /var/www/seofan/include/dedetag.class.php on line 314
+[09-Jul-2019 21:03:08 Etc/GMT-8] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 315
+[09-Jul-2019 21:03:08 Etc/GMT-8] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 316
+[09-Jul-2019 21:03:15 Etc/GMT-8] PHP Warning:  fopen(/var/www/seofan/data/tplcache//index.htm717d4059e812e610.inc.txt): failed to open stream: Permission denied in /var/www/seofan/include/dedetag.class.php on line 314
+[09-Jul-2019 21:03:15 Etc/GMT-8] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 315
+[09-Jul-2019 21:03:15 Etc/GMT-8] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 316
