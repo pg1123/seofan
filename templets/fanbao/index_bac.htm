@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:global.cfg_keywords/}">
+<meta name="description" content="{dede:global.cfg_description/}">
+<link href="{dede:global.cfg_templets_skin/}/css/style.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="{dede:global.cfg_templets_skin/}/css/mobilecss.css" rel="stylesheet" media="screen" type="text/css" />
+</head>
+<body>
+<!--pc端fbz开始 !-->
+<div class="webfbz">
+  <div id="pcfbz">
+    <div class="top">
+      <p class="container">饭宝赚 - 苹果iphone手机赚钱软件 <span>应用：807&nbsp;&nbsp;&nbsp;&nbsp;当日：0&nbsp;&nbsp;&nbsp;新闻：2477&nbsp;&nbsp;&nbsp;当日：16 </span>
+      <p> 
+    </div>
+    <div id="header" class="container clearfix"> <img src="{dede:global.cfg_templets_skin/}/images/logo.png">
+      <div><img src="{dede:global.cfg_templets_skin/}/images/ewm1.png">
+        <p>扫一扫，关注微信公众号，赚钱更方便！</p>
+      </div>
+    </div>
+    <div id="nav" >
+      <ul class="container clearfix">
+      <li class="nactive"><a href="/">首页</a></li>
+      {dede:channel row="10" type="top" col="1" currentstyle="<li class='nactive'><a href='~typelink~' ~rel~><span>~typename~</span></a></li>" }
+        <li><a href='[field:typelink/]' [field:rel/]><span>[field:typename/]</span></a></li>
+      {/dede:channel}
+        <!-- <li class="nactive"><a href="/">首页</a></li>
+        <li><a href="/apple">苹果赚钱</a></li>
+        <li><a href="/android">安卓赚钱</a></li>
+        <li><a href="/other">其他赚钱</a></li>
+        <li><a href="/zixun">赚钱方法</a></li>
+        <li><a href="/new">最新手赚</a></li> -->
+        <!-- <li><a href="/hz">商务合作</a></li> -->
+      </ul>
+    </div>
+    <div id="banner" class="container clearfix">
+      <div id="banner_tabs" class="flexslider">
+        <ul class="slides">
+          <li> <a title="" target="_blank" href="#"> <img  alt="" style="background: url({dede:global.cfg_templets_skin/}/images/banner/banner1.jpg) no-repeat center;" src="{dede:global.cfg_templets_skin/}/images/banner/alpha.png"> </a> </li>
+          <li> <a title="" href="#"> <img style="background: url({dede:global.cfg_templets_skin/}/images/banner/banner2.jpg) no-repeat center;" src="{dede:global.cfg_templets_skin/}/images/banner/alpha.png"> </a> </li>
+          <li> <a title="" href="#"> <img  style="background: url({dede:global.cfg_templets_skin/}/images/banner/banner3.jpg) no-repeat center;" src="{dede:global.cfg_templets_skin/}/images/banner/alpha.png"> </a> </li>
+        </ul>
+        <ul class="flex-direction-nav">
+          <li><a class="flex-prev" href="javascript:;">Previous</a></li>
+          <li><a class="flex-next" href="javascript:;">Next</a></li>
+        </ul>
+        <ol id="bannerCtrl" class="flex-control-nav flex-control-paging">
+          <li><a>1</a></li>
+          <li><a>2</a></li>
+          <li><a>2</a></li>
+        </ol>
+      </div>
+      <div class="tjread">
+        <h2 class="tit">推荐阅读<a href="#">更多</a></h2>
+        <ul>
+          <li><a href="#">手机一天免费赚1000元,手机如何快速赚钱的方法</a></li>
+          <li><a href="#">可以能赚钱的手机软件</a></li>
+          <li><a href="#">怎么样用手机赚钱_用手机怎么赚钱</a></li>
+          <li><a href="#">手机直接赚现金,手机直接赚现金的软件</a></li>
+          <li><a href="#">小鱼赚钱赚钱攻略</a></li>
+          <li><a href="#">大大红包是真的吗？大大红包可以提现吗？附新手视频教程</a></li>
+          <li><a href="#">怎么样用手机赚钱_用手机怎么赚钱</a></li>
+          <li><a href="#">手机直接赚现金,手机直接赚现金的软件</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="main" class="container">
+      <div id="main1">
+        <h2 class="tit">手赚软件排行</h2>
+        <ul class="clearfix">
+        {dede:arclist row="10" typeid="1" orderby="pubdate"}
+          <li><a href="[field:arcurl/]"> <img src="[field:litpic /]">
+            <h3>[field:fulltitle/]</h3>
+            <p></p>
+            </a></li>
+        {/dede:arclist}
+        </ul>
+      </div>
+      <div id="main2" class="clearfix">
+        <div class="main2">
+          <h2 class="tit">精品推荐</h2>
+          <ul class="clearfix">
+            {dede:arclist row="21" typeid="1" flag=c orderby="pubdate"}
+            <li><a href="[field:arcurl/]"> <img src="[field:litpic /]">
+              <h3>[field:fulltitle/]</h3>
+              <p></p>
+              </a></li>
+             {/dede:arclist}
+          </ul>
+        </div>
+        <div class="main2r">
+          <h2 class="tit">上升最快</h2>
+          <ul>
+            {dede:arclist row="10" typeid="1" orderby=click}
+            <li class="clearfix"> <a href="[field:arcurl/]"> <span>1</span>
+              <div class="div1"><img src="[field:litpic /]">
+                <div class="rname">
+                  <h3>[field:fulltitle/]</h3>
+                  <p>点击下载</p>
+                </div>
+              </div>
+              <div class="div2" style="display:none;">
+                <h4>[field:fulltitle/]</h4>
+              </div>
+              </a> </li>
+            {/dede:arclist}
+          </ul>
+        </div>
+      </div>
+      <div id="main3" class="clearfix">
+        <div>
+          <h2 class="tit">手赚资讯<a href="#">更多</a></h2>
+          <ul>
+            {dede:arclist row=8 typeid=6}
+            <li><a href="[field:arcurl/]"> [field:fulltitle/]</a></li>
+            {/dede:arclist}
+          </ul>
+        </div>
+        <div>
+          <h2 class="tit">手赚经验<a href="#">更多</a></h2>
+          <ul>
+            {dede:arclist row=8 typeid=6}
+            <li><a href="[field:arcurl/]"> [field:fulltitle/]</a></li>
+            {/dede:arclist}
+          </ul>
+        </div>
+        <div>
+          <h2 class="tit">手赚新闻<a href="#">更多</a></h2>
+          <ul>
+            {dede:arclist row=8 typeid=6}
+            <li><a href="[field:arcurl/]"> [field:fulltitle/]</a></li>
+            {/dede:arclist}
+          </ul>
+        </div>
+      </div>
+      <div id="main1">
+        <h2 class="tit">最近更新</h2>
+        <ul class="clearfix">
+          {dede:arclist row=10 typeid=1}
+          <li><a href="[field:arcurl/]"> <img src="[field:litpic /]">
+            <h3>[field:fulltitle/]</h3>
+            <p></p>
+            </a></li>
+          <li>
+          {/dede:arclist}
+        </ul>
+      </div>
+      <div id="main1" class="liucheng">
+        <h2 class="tit">手机赚钱教程</h2>
+        <div><img src="{dede:global.cfg_templets_skin/}/images/bz.png"><img src="{dede:global.cfg_templets_skin/}/images/duihuan.jpg"></div>
+      </div
+       
+    >
+    </div>
+  </div>
+  <div id="footer">
+    <div class="container center"><a href="#">苹果赚钱</a>|<a href="#">安卓赚钱</a>|<a href="#">其他赚钱</a>|<a href="#">赚钱方法</a>|<a href="#">手赚排行榜</a>|<a href="#">商务合作</a></div>
+    <div class="container center">
+      <p>© 饭宝赚 - 专业发布苹果ios手机赚钱软件</p>
+      <p> 提交应用Processed in 8.61 MilliSeconds   百度统计站长统计 by 91ssz</p>
+    </div>
+  </div>
+</div>
+<!--pc端fbz结束 !--> 
+
+<script src="{dede:global.cfg_templets_skin/}/js/jquery-1.11.3.min.js"></script> 
+<script src="{dede:global.cfg_templets_skin/}/js/mbslider.js"></script> 
+<script src="{dede:global.cfg_templets_skin/}/js/slider.js"></script> 
+<script type="text/javascript">
+$(function() {
+	var bannerSlider = new Slider($('#banner_tabs'), {
+		time: 5000,
+		delay: 400,
+		event: 'hover',
+		auto: true,
+		mode: 'fade',
+		controller: $('#bannerCtrl'),
+		activeControllerCls: 'active'
+	});
+	$('#banner_tabs .flex-prev').click(function() {
+		bannerSlider.prev()
+	});
+	$('#banner_tabs .flex-next').click(function() {
+		bannerSlider.next()
+	});
+	
+	$(".main2r li").mouseover(function(){
+		$(this).find(".div1").show();
+		$(this).find(".div2").hide();
+		$(this).siblings().find(".div1").hide();
+		$(this).siblings().find(".div2").show();
+		})
+})
+
+
+
+
+
+<!--移动端js-->
+  $(function () {
+$('#fan-home-slider').flexslider({
+        animation: "slide",
+        slideshowSpeed: 3000,
+        pauseOnHover: true,
+        animationLoop: true,   
+        before: function (slider) {
+            slider.pause();
+            slider.play();
+        },
+    });
+    
+$(".flex-prev ,.flex-next").empty();  
+}); 
+
+
+	
+	
+	
+	
+    
+</script>
+</body>
+</html>
