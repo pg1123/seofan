@@ -189,7 +189,7 @@
                     <ul>
                         {dede:arclist row="8" typeid="1" flag=c orderby="pubdate"}
                         <li>
-                            <p class="open"  >
+                            <p class="open" style="[field:global name=autoindex runphp='yes'](@me>1)? @me='display:none':@me='';[/field:global]" >
                                 <em class="l">
                                 <span class="sort-num sort [field:global name=autoindex runphp='yes'](@me>3)? @me='sort-num-grey':@me='';[/field:global] ">[field:global.autoindex/]</span>
                                 <a href="[field:arcurl/]" class="rank-img"><img src="[field:litpic /]" border="0" alt="[field:fulltitle/]"></a>
@@ -199,7 +199,8 @@
                                     <a href="[field:arcurl/]" class="dwd" rel="nofollow">下载</a>
                                 </span>
                             </p>
-                            <p class="close" style='display:none;'>
+                            <p class="close" style="
+                            [field:global name=autoindex runphp='yes'] if(@me>1) @me='display:block'; else @me='display:none'; [/field:global]">
                                 <span class="sort-num sort ">[field:global.autoindex/]</span>
                                 <a href="[field:arcurl/]" class="col-6b txt-overflw description">
                                     [field:fulltitle/]                             </a>
