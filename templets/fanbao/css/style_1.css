@@ -433,8 +433,8 @@ p .hr2,p.hr{clear:both;display:block;padding:12px 0;height:1px;border:1px dashed
 .Top_info .btnwrap .btn.ios_btn p {width: 136px;height: 28px;line-height: 28px;text-align: center;float: left;color: #fff;font-size: 16px;font-weight: bold;margin: 11px 0;}
 
 /* 星星 */
-.level{background:url(../images/star1_2.png) no-repeat left -14px;background-size:73px 28px;width:73px;height:14px;font-size:0;line-height:0;position:relative;text-align:left;}
-.level span.l1,.level span.l2,.level span.l3,.level span.l4,.level span.l5{background:url(../images/star1_2.png) no-repeat left -1px;background-size:73px 28px;height:12px;width:73px;position:absolute;display:block;}
+.level{background:url(../images/star1_1.png) no-repeat left -14px;background-size:73px 28px;width:73px;height:14px;font-size:0;line-height:0;position:relative;text-align:left;}
+.level span.l1,.level span.l2,.level span.l3,.level span.l4,.level span.l5{background:url(../images/star1_1.png) no-repeat left -1px;background-size:73px 28px;height:12px;width:73px;position:absolute;display:block;}
 .level span.l1{width:20%;}
 .level span.l2{width:40%;}
 .level span.l3{width:60%;}
