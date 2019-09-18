@@ -1,0 +1,40 @@
+<!-- 顶部  开始-->
+<div class="top-bar-area">
+    <div class="marauto">
+        <div class="l bar-left" style="color:#aaa;"><a class="web-name" href="/">饭宝手赚网</a>&nbsp;-&nbsp;最近手机赚钱软件排行 手机赚钱软件分享平台</div>
+        <div class="r bar-right"><a href="/index.php?tpl=rss">RSS</a>&nbsp;<a href="/" >XML</a></div>
+    </div>
+    <hr style="border: 0.3px solid #5ecdf4;" width="100%"/>
+</div>
+
+<div class="top-head">
+    <div class="marauto">
+        <a href="javascript:void(0);" class="l web-logo">
+            <img border="0" alt="手赚汇-手机赚钱软件分享平台，手赚app排行，手赚网" src="{dede:global.cfg_templets_skin/}/picture/5c77e0ab6802a.png" /></a>
+        <ul class="r head-seach">
+            <li class="seach-bar">
+                <p class="bdr-span">
+                    <input type="text" class="l seach-txt" id="seach-txt" placeholder="imoney" onkeyup="search_up(this,event)" onclick="show_hot(this);" onkeydown="search_down(this,event); if(event.keyCode==13) do_search();" value="" />
+                    <a href="javascript:void(0);" class="l seach-btn" onClick="do_search()">手赚搜索</a></p>
+            </li>
+            <li class="keyword">热门搜索：<a href="/index.php?tpl=search&q=惠头条">惠头条</a><a href="/index.php?tpl=search&q=赚">赚</a><a href="/index.php?tpl=search&q=试玩">试玩</a><a href="/index.php?tpl=search&q=赚钱">赚钱</a><a href="/index.php?tpl=search&q=手赚">手赚</a></li>
+        </ul>
+    </div>
+</div>
+<p class="line-t-10"></p>
+<div class="top-nav">
+    <div class="pr marauto">
+        <ul class="ul-nav">
+            <li><a href="/">首页a</a></li>
+            <li>
+
+{dede:channel row="10" type="top" col="1" currentstyle="<li class='selected'><a href='~typelink~' ~rel~><span>~typename~</span></a></li>" }
+<li><a href='[field:typelink/]' [field:rel/]><span>[field:typename/]</span></a></li>
+{/dede:channel}
+<li><a href='/special' [field:rel/]><span>手赚专题</span></a></li>
+
+
+</li>
+</ul>
+</div>      
+</div>
