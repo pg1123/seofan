@@ -47,3 +47,43 @@
 [09-Jul-2019 21:03:15 Etc/GMT-8] PHP Warning:  fopen(/var/www/seofan/data/tplcache//index.htm717d4059e812e610.inc.txt): failed to open stream: Permission denied in /var/www/seofan/include/dedetag.class.php on line 314
 [09-Jul-2019 21:03:15 Etc/GMT-8] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 315
 [09-Jul-2019 21:03:15 Etc/GMT-8] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /var/www/seofan/include/dedetag.class.php on line 316
+[17-Sep-2019 22:38:24 Etc/GMT-8] PHP Fatal error:  Uncaught Error: Call to undefined function GetTypeName() in /var/www/seofan/include/dedetag.class.php(1000) : eval()'d code:1
+Stack trace:
+#0 /var/www/seofan/include/dedetag.class.php(1000): eval()
+#1 /var/www/seofan/include/dedetag.class.php(560): DedeTagParse->EvalFunc('\xE8\x8B\xB9\xE6\x9E\x9C\xE8\xB5\x9A\xE9\x92\xB1', '$DedeFieldValue...', Object(DedeTag))
+#2 /var/www/seofan/include/taglib/arclist.lib.php(534): DedeTagParse->Assign(6, '\xE8\x8B\xB9\xE6\x9E\x9C\xE8\xB5\x9A\xE9\x92\xB1')
+#3 /var/www/seofan/include/taglib/arclist.lib.php(135): lib_arclistDone(Object(PartView), Object(DedeTag), '1,2,3', Array, 1, 30, 160, 120, 120, 'all', 'lastpost', '', '<li class="card...', 0, '', 0, '', '', '', 0, '', '', 0, '')
+#4 /var/www/seofan/include/helpers/channelunit.helper.php(558): lib_arclist(Object(DedeTag), Object(PartView))
+#5 /var/www/seofan/include/arc.partview.class.php(224): MakeOneTag(Object(DedeTagParse), Object(PartView))
+#6 /var/www/seofan/include/arc.partview.class.php(149): PartView->ParseTemplet()
+ in /var/www/seofan/include/dedetag.class.php(1000) : eval()'d code on line 1
+[17-Sep-2019 22:38:36 Etc/GMT-8] PHP Fatal error:  Uncaught Error: Call to undefined function GetTypeName() in /var/www/seofan/include/dedetag.class.php(1000) : eval()'d code:1
+Stack trace:
+#0 /var/www/seofan/include/dedetag.class.php(1000): eval()
+#1 /var/www/seofan/include/dedetag.class.php(560): DedeTagParse->EvalFunc('\xE8\x8B\xB9\xE6\x9E\x9C\xE8\xB5\x9A\xE9\x92\xB1', '$DedeFieldValue...', Object(DedeTag))
+#2 /var/www/seofan/include/taglib/arclist.lib.php(534): DedeTagParse->Assign(6, '\xE8\x8B\xB9\xE6\x9E\x9C\xE8\xB5\x9A\xE9\x92\xB1')
+#3 /var/www/seofan/include/taglib/arclist.lib.php(135): lib_arclistDone(Object(PartView), Object(DedeTag), '1,2,3', Array, 1, 30, 160, 120, 120, 'all', 'lastpost', '', '<li class="card...', 0, '', 0, '', '', '', 0, '', '', 0, '')
+#4 /var/www/seofan/include/helpers/channelunit.helper.php(558): lib_arclist(Object(DedeTag), Object(PartView))
+#5 /var/www/seofan/include/arc.partview.class.php(224): MakeOneTag(Object(DedeTagParse), Object(PartView))
+#6 /var/www/seofan/include/arc.partview.class.php(149): PartView->ParseTemplet()
+ in /var/www/seofan/include/dedetag.class.php(1000) : eval()'d code on line 1
+[17-Sep-2019 22:38:45 Etc/GMT-8] PHP Fatal error:  Uncaught Error: Call to undefined function GetTypeName() in /var/www/seofan/include/dedetag.class.php(1000) : eval()'d code:1
+Stack trace:
+#0 /var/www/seofan/include/dedetag.class.php(1000): eval()
+#1 /var/www/seofan/include/dedetag.class.php(560): DedeTagParse->EvalFunc('\xE8\x8B\xB9\xE6\x9E\x9C\xE8\xB5\x9A\xE9\x92\xB1', '$DedeFieldValue...', Object(DedeTag))
+#2 /var/www/seofan/include/taglib/arclist.lib.php(534): DedeTagParse->Assign(6, '\xE8\x8B\xB9\xE6\x9E\x9C\xE8\xB5\x9A\xE9\x92\xB1')
+#3 /var/www/seofan/include/taglib/arclist.lib.php(135): lib_arclistDone(Object(PartView), Object(DedeTag), '1,2,3', Array, 1, 30, 160, 120, 120, 'all', 'lastpost', '', '<li class="card...', 0, '', 0, '', '', '', 0, '', '', 0, '')
+#4 /var/www/seofan/include/helpers/channelunit.helper.php(558): lib_arclist(Object(DedeTag), Object(PartView))
+#5 /var/www/seofan/include/arc.partview.class.php(224): MakeOneTag(Object(DedeTagParse), Object(PartView))
+#6 /var/www/seofan/include/arc.partview.class.php(149): PartView->ParseTemplet()
+ in /var/www/seofan/include/dedetag.class.php(1000) : eval()'d code on line 1
+[17-Sep-2019 22:38:47 Etc/GMT-8] PHP Fatal error:  Uncaught Error: Call to undefined function GetTypeName() in /var/www/seofan/include/dedetag.class.php(1000) : eval()'d code:1
+Stack trace:
+#0 /var/www/seofan/include/dedetag.class.php(1000): eval()
+#1 /var/www/seofan/include/dedetag.class.php(560): DedeTagParse->EvalFunc('\xE8\x8B\xB9\xE6\x9E\x9C\xE8\xB5\x9A\xE9\x92\xB1', '$DedeFieldValue...', Object(DedeTag))
+#2 /var/www/seofan/include/taglib/arclist.lib.php(534): DedeTagParse->Assign(6, '\xE8\x8B\xB9\xE6\x9E\x9C\xE8\xB5\x9A\xE9\x92\xB1')
+#3 /var/www/seofan/include/taglib/arclist.lib.php(135): lib_arclistDone(Object(PartView), Object(DedeTag), '1,2,3', Array, 1, 30, 160, 120, 120, 'all', 'lastpost', '', '<li class="card...', 0, '', 0, '', '', '', 0, '', '', 0, '')
+#4 /var/www/seofan/include/helpers/channelunit.helper.php(558): lib_arclist(Object(DedeTag), Object(PartView))
+#5 /var/www/seofan/include/arc.partview.class.php(224): MakeOneTag(Object(DedeTagParse), Object(PartView))
+#6 /var/www/seofan/include/arc.partview.class.php(149): PartView->ParseTemplet()
+ in /var/www/seofan/include/dedetag.class.php(1000) : eval()'d code on line 1
