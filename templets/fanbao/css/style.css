@@ -88,6 +88,7 @@ p .hr2,p.hr{clear:both;display:block;padding:12px 0;height:1px;border:1px dashed
 .warp-top .top-nav ul li,.warp-top .top-nav ul li dl dd{float:left;display:block;}
 .warp-top .top-nav ul li a{padding:0 22px;color:#fff;font-size:17px;line-height:42px;}
 .warp-top .top-nav ul li a.selected{background:#dc4d33;}
+.selected {background:#dc4d33;}
 .warp-top .top-nav ul li dl{position:absolute;}
 .warp-top .top-nav ul li dl.ad-play{padding:10px 0;width:200px;}
 .warp-top .top-nav ul li dl.ad-software{padding:10px 0;width:280px;}

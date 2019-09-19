@@ -12,17 +12,17 @@
         $(this).addClass('selected').parents('li').siblings().children('a').removeClass('selected');
     });
 
-    $('.ul-nav li').hover(function(){
-        if($(this).children('dl').length > 0)
-        $(this).attr('class','nav-opacity')
-		.children('dl')
-        .show()
-        .addClass('nav-opacity');
-    },function(){
-        if($(this).attr('class','nav-opacity-none').children('dl').length > 0)
-        $(this).children('dl')
-        .hide();
-    });
+    // $('.ul-nav li').hover(function(){
+    //     if($(this).children('dl').length > 0)
+    //     $(this).attr('class','nav-opacity')
+	// 	.children('dl')
+    //     .show()
+    //     .addClass('nav-opacity');
+    // },function(){
+    //     if($(this).attr('class','nav-opacity-none').children('dl').length > 0)
+    //     $(this).children('dl')
+    //     .hide();
+    // });
     //精品推荐
     $('.bout-content li').hover(function(){
         $(this).addClass('li-hover');
