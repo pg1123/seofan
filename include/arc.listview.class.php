@@ -1016,7 +1016,7 @@ class ListView
         }
         else
         {
-            $indexpage="<li>首页</li>\r\n";
+            $indexpage="<li><a>首页</a></li>\r\n";
         }
 
         //下一页,未页的链接
@@ -1027,7 +1027,7 @@ class ListView
         }
         else
         {
-            $endpage="<li>末页</li>\r\n";
+            $endpage="<li><a>末页</a></li>\r\n";
         }
 
         //option链接
@@ -1075,7 +1075,7 @@ class ListView
         {
             if($j==$this->PageNo)
             {
-                $listdd.= "<li class=\"thisclass\">$j</li>\r\n";
+                $listdd.= "<li class=\"thisclass\"><a>$j</a></li>\r\n";
             }
             else
             {
