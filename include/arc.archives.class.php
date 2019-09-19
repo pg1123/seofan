@@ -979,7 +979,7 @@ class Archives
         {
             return "";
         }
-        $PageList = "<li><a>共".$totalPage."页: </a></li>";
+        $PageList = "<li><a>共qqq".$totalPage."页: </a></li>";
         $nPage = $nowPage-1;
         $lPage = $nowPage+1;
         if($nowPage==1)
