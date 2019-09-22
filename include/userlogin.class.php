@@ -154,6 +154,9 @@ function ClearMyAddon($aid=0, $title='')
     $cacheFile = DEDEDATA.'/cache/addon-'.session_id().'.inc';
     $_SESSION['bigfile_info'] = array();
     $_SESSION['file_info'] = array();
+    $_SESSION['bigfile_info2'] = array();
+    $_SESSION['file_info2'] = array();
+
     if(!file_exists($cacheFile))
     {
         return ;

@@ -53,6 +53,18 @@ if($dopost!='save')
     }
     $channelid = $arcRow['channel'];
     $tags = GetTags($aid);
+	
+// 图集
+$imgurls = $addRow["imgurls"];
+$maxwidth = $addRow["maxwidth"];
+$pagestyle = $addRow["pagestyle"];
+$irow = $addRow["row"];
+$icol = $addRow["col"];
+$isrm = $addRow["isrm"];
+$ddmaxwidth = $addRow["ddmaxwidth"];
+$pagepicnum = $addRow["pagepicnum"];
+// 图集
+
     include DedeInclude("templets/article_edit.htm");
     exit();
 }
@@ -127,6 +139,167 @@ else if($dopost=='save')
         $ddisremote = 0;
     }
     $litpic = GetDDImage('none',$picname,$ddisremote);
+
+	
+// 图集
+if(!isset($formhtml)) $formhtml = 0;
+if(!isset($formzip)) $formzip = 0;
+if(!isset($ddisfirst)) $ddisfirst = 0;
+if(!isset($delzip)) $delzip = 0;
+$imgurls = "{dede:pagestyle maxwidth='$maxwidth' pagepicnum='$pagepicnum' ddmaxwidth='$ddmaxwidth' row='$row' col='$col' value='$pagestyle'/}\r\n";
+$hasone = false;
+
+//----------------------------------------
+//检查旧的图片是否有更新，并保存
+//-----------------------------------------
+for($i=1; $i<=120; $i++)
+{
+	if( !isset(${'imgurl'.$i}) ) continue;
+	$info = '';
+	$iinfo = str_replace("'", "`", stripslashes(${'imgmsg'.$i}));
+	$iurl = stripslashes(${'imgurl'.$i});
+	$ddurl = stripslashes(${'imgddurl'.$i});
+	if(preg_match("#swfupload#i", $ddurl)) $ddurl = '';
+	$imgfile = $cfg_basedir.$iurl;
+	$litimgfile = $cfg_basedir.$ddurl;
+	//有上传文件的情况
+	if( isset(${'imgfile'.$i}) && is_uploaded_file(${'imgfile'.$i}) )
+	{
+		$tmpFile = ${'imgfile'.$i};
+		//检测上传的图片， 如果类型不对，保留原来图片
+		$imginfos = @GetImageSize($tmpFile, $info);
+		if(!is_array($imginfos))
+		{
+			$imginfos = @GetImageSize($imgfile, $info);
+			$imgurls .= "{dede:img ddimg='$ddurl' text='$iinfo' width='".$imginfos[0]."' height='".$imginfos[1]."'} $iurl {/dede:img}\r\n";
+			continue;
+		}
+		move_uploaded_file($tmpFile, $imgfile);
+		$imginfos = @GetImageSize($imgfile, $info);
+		if($ddurl==$iurl)
+		{
+			$litpicname = $pagestyle > 2 ? GetImageMapDD($iurl, $cfg_ddimg_width) : $iurl;
+			$litimgfile = $cfg_basedir.$litpicname;
+		}
+		else
+		{
+			if($cfg_ddimg_full=='Y') ImageResizeNew($imgfile, $cfg_ddimg_width, $cfg_ddimg_height, $litimgfile);
+			else ImageResize($imgfile, $cfg_ddimg_width, $cfg_ddimg_height, $litimgfile);
+			$litpicname = $ddurl;
+		}
+		$imgurls .= "{dede:img ddimg='$litpicname' text='$iinfo' width='".$imginfos[0]."' height='".$imginfos[1]."'} $iurl {/dede:img}\r\n";
+	}
+	//没上传图片(只修改msg信息)
+	else
+	{
+		$iinfo = str_replace("'", "`", stripslashes(${'imgmsg'.$i}));
+		$iurl = stripslashes(${'imgurl'.$i});
+		$ddurl = stripslashes(${'imgddurl'.$i});
+		if(preg_match("#swfupload#i", $ddurl))
+		{
+			$ddurl = $pagestyle > 2 ? GetImageMapDD($iurl, $cfg_ddimg_width) : $iurl;
+		}
+		$imginfos = @GetImageSize($imgfile, $info);
+		$imgurls .= "{dede:img ddimg='$ddurl' text='$iinfo' width='".$imginfos[0]."' height='".$imginfos[1]."'} $iurl {/dede:img}\r\n";
+	}
+}
+
+//----------------------------
+//从HTML中获取新图片
+//----------------------------
+if($formhtml==1 && !empty($imagebody))
+{
+	$imagebody = stripslashes($imagebody);
+	$imgurls .= GetCurContentAlbum($imagebody,$copysource,$litpicname);
+	if($ddisfirst==1 && $litpic=="" && !empty($litpicname))
+	{
+		$litpic = $litpicname;
+		$hasone = true;
+	}
+}
+/*---------------------
+function _getformzip()
+从ZIP文件中获取新图片
+---------------------*/
+if($formzip==1)
+{
+	include_once(DEDEINC."/zip.class.php");
+	include_once(DEDEADMIN."/file_class.php");
+	$zipfile = $cfg_basedir.str_replace($cfg_mainsite,'',$zipfile);
+	$tmpzipdir = DEDEDATA.'/ziptmp/'.cn_substr(md5(ExecTime()),16);
+	$ntime = time();
+	if(file_exists($zipfile))
+	{
+
+		@mkdir($tmpzipdir,$GLOBALS['cfg_dir_purview']);
+		@chmod($tmpzipdir,$GLOBALS['cfg_dir_purview']);
+		$z = new zip();
+		$z->ExtractAll($zipfile,$tmpzipdir);
+		$fm = new FileManagement();
+		$imgs = array();
+		$fm->GetMatchFiles($tmpzipdir,"jpg|png|gif",$imgs);
+		$i = 0;
+		foreach($imgs as $imgold)
+		{
+			$i++;
+			$savepath = $cfg_image_dir."/".MyDate("Y-m",$ntime);
+			CreateDir($savepath);
+			$iurl = $savepath."/".MyDate("d",$ntime).dd2char(MyDate("His",$ntime).'-'.$adminid."-{$i}".mt_rand(1000,9999));
+			$iurl = $iurl.substr($imgold,-4,4);
+			$imgfile = $cfg_basedir.$iurl;
+			copy($imgold,$imgfile);
+			unlink($imgold);
+			if(is_file($imgfile))
+			{
+				$litpicname = $pagestyle > 2 ? GetImageMapDD($iurl,$cfg_ddimg_width) : $iurl;
+				$info = '';
+				$imginfos = GetImageSize($imgfile,$info);
+				$imgurls .= "{dede:img ddimg='$litpicname' text='' width='".$imginfos[0]."' height='".$imginfos[1]."'} $iurl {/dede:img}\r\n";
+
+				//把图片信息保存到媒体文档管理档案中
+				$inquery = "
+			   INSERT INTO #@__uploads(title,url,mediatype,width,height,playtime,filesize,uptime,mid)
+				VALUES ('{$title}','{$iurl}','1','".$imginfos[0]."','".$imginfos[1]."','0','".filesize($imgfile)."','".$ntime."','$adminid');
+			 ";
+				$dsql->ExecuteNoneQuery($inquery);
+				if(!$hasone && $ddisfirst==1
+				&& $litpic=="" && !empty($litpicname))
+				{
+					if( file_exists($cfg_basedir.$litpicname) )
+					{
+						$litpic = $litpicname;
+						$hasone = true;
+					}
+				}
+			}
+		}
+		if($delzip==1)
+		{
+			unlink($zipfile);
+		}
+		$fm->RmDirFiles($tmpzipdir);
+	}
+}
+/*---------------------
+function _swfupload()
+通过swfupload上传的新图片
+---------------------*/
+if(is_array($_SESSION['bigfile_info2']))
+{
+	foreach($_SESSION['bigfile_info2'] as $k=>$v)
+	{
+		$truefile = $cfg_basedir.$v;
+		if(strlen($v)<2 || !file_exists($truefile)) continue;
+		$info = '';
+		$imginfos = GetImageSize($truefile, $info);
+		$litpicname = $pagestyle > 2 ? GetImageMapDD($v, $cfg_ddimg_width) : $v;
+		$imginfo =  !empty(${'picinfook_'.$k}) ? ${'picinfook_'.$k} : '';
+		$imgurls .= "{dede:img ddimg='$litpicname' text='$imginfo' width='".$imginfos[0]."' height='".$imginfos[1]."'} $v {/dede:img}\r\n";
+	}
+}
+$imgurls = addslashes($imgurls);
+// 图集
+
 
     //分析body里的内容
     $body = AnalyseHtmlBody($body,$description,$litpic,$keywords,'htmltext');
@@ -214,7 +387,7 @@ else if($dopost=='save')
     {
         $useip = GetIP();
         $templet = empty($templet) ? '' : $templet;
-        $iquery = "UPDATE `$addtable` SET typeid='$typeid',body='$body'{$inadd_f},redirecturl='$redirecturl',templet='$templet',userip='$useip' WHERE aid='$id'";
+        $iquery = "UPDATE `$addtable` SET typeid='$typeid',body='$body',pagestyle='$pagestyle',maxwidth = '$maxwidth',ddmaxwidth = '$ddmaxwidth',pagepicnum = '$pagepicnum',imgurls='$imgurls',row='$row',col='$col',isrm='$isrm'{$inadd_f},redirecturl='$redirecturl',templet='$templet',userip='$useip' WHERE aid='$id'";
         if(!$dsql->ExecuteNoneQuery($iquery))
         {
             ShowMsg("更新附加表 `$addtable`  时出错，请检查原因！","javascript:;");
