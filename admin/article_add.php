@@ -124,6 +124,128 @@ else if($dopost=='save')
     
     $litpic = GetDDImage('none', $picname, $ddisremote);
 
+    // 图集
+if(!isset($formhtml)) $formhtml = 0;
+if(!isset($formzip)) $formzip = 0;
+if(!isset($ddisfirst)) $ddisfirst = 0;
+if(!isset($delzip)) $delzip = 0;
+$imgurls = "{dede:pagestyle maxwidth='$maxwidth' pagepicnum='$pagepicnum' ddmaxwidth='$ddmaxwidth' row='$row' col='$col' value='$pagestyle'/}\r\n";
+$hasone = FALSE;
+
+//处理并保存从网上复制的图片
+/*---------------------
+function _getformhtml()
+------------------*/
+if($formhtml==1)
+{
+	$imagebody = stripslashes($imagebody);
+	$imgurls .= GetCurContentAlbum($imagebody,$copysource,$litpicname);
+	if($ddisfirst==1 && $litpic=='' && !empty($litpicname))
+	{
+		$litpic = $litpicname;
+		$hasone = TRUE;
+	}
+}
+/*---------------------
+function _getformzip()
+处理从ZIP中解压的图片
+---------------------*/
+if($formzip==1)
+{
+	include_once(DEDEINC."/zip.class.php");
+	include_once(DEDEADMIN."/file_class.php");
+	$zipfile = $cfg_basedir.str_replace($cfg_mainsite,'',$zipfile);
+	$tmpzipdir = DEDEDATA.'/ziptmp/'.cn_substr(md5(ExecTime()),16);
+	$ntime = time();
+	if(file_exists($zipfile))
+	{
+		@mkdir($tmpzipdir,$GLOBALS['cfg_dir_purview']);
+		@chmod($tmpzipdir,$GLOBALS['cfg_dir_purview']);
+		$z = new zip();
+		$z->ExtractAll($zipfile,$tmpzipdir);
+		$fm = new FileManagement();
+		$imgs = array();
+		$fm->GetMatchFiles($tmpzipdir,"jpg|png|gif",$imgs);
+		$i = 0;
+		foreach($imgs as $imgold)
+		{
+			$i++;
+			$savepath = $cfg_image_dir."/".MyDate("Y-m",$ntime);
+			CreateDir($savepath);
+			$iurl = $savepath."/".MyDate("d",$ntime).dd2char(MyDate("His",$ntime).'-'.$adminid."-{$i}".mt_rand(1000,9999));
+			$iurl = $iurl.substr($imgold,-4,4);
+			$imgfile = $cfg_basedir.$iurl;
+			copy($imgold,$imgfile);
+			unlink($imgold);
+
+			if(is_file($imgfile))
+			{
+				$litpicname = $pagestyle > 2 ? GetImageMapDD($iurl,$cfg_ddimg_width) : $iurl;
+				//指定了提取第一张为缩略图的情况强制使用第一张缩略图
+				if($i=='1')
+				{
+					if(!$hasone && $ddisfirst==1 && $litpic=='' && empty($litpicname))
+					{
+						$litpicname = GetImageMapDD($iurl,$cfg_ddimg_width);
+					}
+				}
+				$info = '';
+				$imginfos = GetImageSize($imgfile,$info);
+				$imgurls .= "{dede:img ddimg='$litpicname' text='' width='".$imginfos[0]."' height='".$imginfos[1]."'} $iurl {/dede:img}\r\n";
+
+				//把图片信息保存到媒体文档管理档案中
+				$inquery = "
+			   INSERT INTO #@__uploads(title,url,mediatype,width,height,playtime,filesize,uptime,mid)
+				VALUES ('{$title}','{$iurl}','1','".$imginfos[0]."','".$imginfos[1]."','0','".filesize($imgfile)."','".$ntime."','$adminid');
+			 ";
+				$dsql->ExecuteNoneQuery($inquery);
+				$fid = $dsql->GetLastID();
+				AddMyAddon($fid, $iurl);
+				
+				WaterImg($imgfile, 'up');
+
+				if(!$hasone && $ddisfirst==1 && $litpic=='')
+				{
+					if(empty($litpicname))
+					{
+						$litpicname = $iurl;
+						$litpicname = GetImageMapDD($iurl, $cfg_ddimg_width);
+					}
+					$litpic = $litpicname;
+					$hasone = TRUE;
+				}
+			}
+		}
+		if($delzip==1) unlink($zipfile);
+		$fm->RmDirFiles($tmpzipdir);
+	}
+}
+/*---------------------
+function _getformupload()
+通过swfupload正常上传的图片
+---------------------*/
+if(is_array($_SESSION['bigfile_info2']))
+{
+	foreach($_SESSION['bigfile_info2'] as $k=>$v)
+	{
+		$truefile = $cfg_basedir.$v;
+		if(strlen($v)<2 || !file_exists($truefile)) continue;
+		$info = '';
+		$imginfos = GetImageSize($truefile, $info);
+		$litpicname = $pagestyle > 2 ? GetImageMapDD($v, $cfg_ddimg_width) : '';
+		if(!$hasone && $ddisfirst==1 && $litpic=='')
+		{
+			 $litpic = empty($litpicname) ? GetImageMapDD($v, $cfg_ddimg_width) : $litpicname;
+			 $hasone = TRUE;
+		}
+		$imginfo =  !empty(${'picinfook_'.$k}) ? ${'picinfook_'.$k} : '';
+		$imgurls .= "{dede:img ddimg='$v' text='$imginfo' width='".$imginfos[0]."' height='".$imginfos[1]."'} $v {/dede:img}\r\n";
+	}
+}
+$imgurls = addslashes($imgurls);
+// 图集
+
+
     //生成文档ID
     $arcID = GetIndexKey($arcrank,$typeid,$sortrank,$channelid,$senddate,$adminid);
     
@@ -213,7 +335,7 @@ else if($dopost=='save')
     }
     $useip = GetIP();
     $templet = empty($templet) ? '' : $templet;
-    $query = "INSERT INTO `{$addtable}`(aid,typeid,redirecturl,templet,userip,body{$inadd_f}) Values('$arcID','$typeid','$redirecturl','$templet','$useip','$body'{$inadd_v})";
+    $query = "INSERT INTO `{$addtable}`(aid,typeid,redirecturl,templet,userip,body,pagestyle,maxwidth,imgurls,row,col,isrm,ddmaxwidth,pagepicnum{$inadd_f}) Values('$arcID','$typeid','$redirecturl','$templet','$useip','$body','$pagestyle','$maxwidth','$imgurls','$row','$col','$isrm','$ddmaxwidth','$pagepicnum'{$inadd_v})";
     if(!$dsql->ExecuteNoneQuery($query))
     {
         $gerr = $dsql->GetError();
