@@ -45,8 +45,8 @@
                 </p>
               </li>
               <li>
-                <span>浏览：</span><p>{dede:field.click /}</p>
-                <span>下载1：</span><p>
+                <span>浏览：</span><p><script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}&cid={dede:field name='channel'/}" type='text/javascript' language="javascript"></script></p>
+                <span>下载：</span><p>
                   {dede:sql sql="Select download from `dede_addonarticle` where aid=~id~"}  
                       [field:download/]
                   {/dede:sql}次</p>
