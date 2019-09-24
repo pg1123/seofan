@@ -2,7 +2,16 @@
 require_once (dirname(__FILE__) . "/include/common.inc.php");
 $ip =getip(); //获取用户IP
 $id = $_GET['id'];
+$view = $_GET['view'];
 if(!isset($id) || empty($id)) exit;
+
+
+if($view == 'yes') {
+    $rows = $dsql->GetOne("select download from dede_addonarticle where aid='".$id."'");
+    echo "document.write('".$rows['download']."');\r\n";
+    exit();
+}
+
 
 //查询已赞过的IP
 $dsql->SetQuery("SELECT ip FROM dede_download WHERE aid='".$id."' and ip='$ip'");
@@ -26,10 +35,11 @@ if($count==0){ //如果没有记录
     
 }
 
+
 $rows = $dsql->GetOne("select url from dede_addonarticle where aid='".$id."'");//获取被赞的数量
 $url = $rows['url'];//获取赞数值
-echo ("<script>window.open('".$url."');</script>"); 
-//header("Location: {$url}");
+//echo ("<script>window.open('".$url."');</script>"); 
+header("Location: {$url}");
 exit;
 
 
