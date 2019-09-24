@@ -506,7 +506,7 @@ function LoadTestDiv2()
 	<div class="layui-form-item">
 		<label class="layui-form-label">关键字</label>
 		<div class="layui-input-block">
-			<input type="text" name="keywords" id="keywords" value="<?php echo $arcRow["keywords"]?>" class="layui-input" style="float:left;margin-right:-2px;width:300px;">
+			<input type="text" name="keywords" id="keywords" value="<?php echo $arcRow["keywords"]?>" class="layui-input" style="float:left;margin-right:-2px;width:500px;">
 			<input type="button" name="Submit" value="浏览..." onClick="SelectKeywords('form1.keywords');" class="layui-btn layui-btn-normal" />
 			<input name="autokey" type="checkbox" onClick="ShowHide('keywords');"; class="np" id="autokey" value="1"<?php if($cfg_arc_autokeyword=='Y') echo ' checked="1" '; ?> lay-ignore/>自动获取，手动填写用","分开
 		</div>

@@ -687,7 +687,7 @@ function AnalyseHtmlBody($body,&$description,&$litpic,&$keywords,$dtype='')
         {
             foreach($titleindexs as $k => $v)
             {
-                if(strlen($keywords.$k)>=60)
+                if(strlen($keywords.$k)>=70)
                 {
                     break;
                 }
