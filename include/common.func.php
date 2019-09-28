@@ -320,3 +320,27 @@ if( file_exists(DEDEINC.'/extend.func.php') )
 {
     require_once(DEDEINC.'/extend.func.php');
 }
+
+
+//add
+//dede列表页输出多张图片
+function listimgs($aid, $imgwith = 500, $imgheight = 300, $num = 0, $style = ''){
+    global $dsql;
+    $imgurls = '';
+    $row = $dsql -> getone("Select imgurls From`dede_addonarticle` where aid='$aid'"); //
+    $imgurls = $row['imgurls'];
+    preg_match_all("/{dede:img (.*)}(.*){\/dede:img/isU", $imgurls, $wordcount);
+    $count = count($wordcount[2]);
+    if ($num > $count || $num == 0){
+    $num = $count;
+    }
+
+    for($i = 0;$i < $num;$i++){
+    if($style == 'li'){
+    $imglist .= "<li><ahref=#" . $i . "><imgsrc=". trim($wordcount[2][$i]) . " width=" . $imgwith . " height=" . $imgheight . "></li></a>";
+    }else{
+    $imglist .= "<img src= " . trim($wordcount[2][$i]) . " width=" . $imgwith . "height=" . $imgheight . ">";
+    }
+    }
+    return $imglist;
+}
