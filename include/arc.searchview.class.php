@@ -446,7 +446,7 @@ class SearchView
         }else{
             $this->AddTable="#@__archives";
         }
-        $cquery = "SELECT * FROM `{$this->AddTable}` arc WHERE ".$this->AddSql;
+        $cquery = "SELECT * FROM `{$this->AddTable}` arc WHERE arc.typeid not in (4) and ".$this->AddSql;
         //var_dump($cquery);
         $hascode = md5($cquery);
         $row = $this->dsql->GetOne("SELECT * FROM `#@__arccache` WHERE `md5hash`='".$hascode."' ");
@@ -696,7 +696,7 @@ class SearchView
             $query = "SELECT arc.*,act.typedir,act.typename,act.isdefault,act.defaultname,act.namerule,
             act.namerule2,act.ispart,act.moresite,act.siteurl,act.sitepath
             FROM `{$this->AddTable}` arc LEFT JOIN `#@__arctype` act ON arc.typeid=act.id
-            WHERE {$this->AddSql} $ordersql LIMIT $limitstart,$row";
+            WHERE arc.typeid not in (4) and {$this->AddSql} $ordersql LIMIT $limitstart,$row";
         }
         
         $this->dsql->SetQuery($query);
