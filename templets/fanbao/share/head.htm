@@ -1,5 +1,24 @@
+<div class="full-wrap header clearfix border-shadow">
+<div class="wrap">
+<div class="logo"><a href="/"><img width="200px;" src="{dede:global.cfg_templets_skin/}/images/logo.png" alt="饭宝手赚网logo"></a></div>
+<ul class="menu">
+    <li><a href="/">首页</a></li>
+    {dede:channel row="10" type="top" col="1" currentstyle="<li class='selected'><a href='~typelink~' ~rel~><span>~typename~</span></a></li>" }
+        <li><a href='[field:typelink/]' [field:rel/]><span>[field:typename/]</span></a></li>
+    {/dede:channel}
+    <li><a href='/special' [field:rel/]><span>手赚专题</span></a></li>
+</ul>
+<div class="search">
+<input type="text" class="search-input" id="seach-txt" placeholder="手机赚钱app搜索" onkeyup="search_up(this,event)" onclick="show_hot(this);" onkeydown="search_down(this,event); if(event.keyCode==13) do_search();" value="">
+<a href="javascript:;" class="link-icon" onClick="do_search()"><i class="icon"></i></a>
+<script type="text/javascript">function do_search() {var searchvalue = $("#seach-txt").val();if(searchvalue == '') {return false;}window.location.href = "/index.php?tpl=search&q=" + encodeURIComponent(searchvalue);}</script>
+</div>
+</div>
+</div>
+
+
 <!-- 顶部  开始-->
-<div class="top-bar-area">
+<!-- <div class="top-bar-area">
     <div class="marauto">
         <div class="l bar-left" style="color:#aaa;"><a class="web-name" href="/">饭宝手赚网</a>&nbsp;-&nbsp;最近手机赚钱软件排行 手机赚钱软件分享平台</div>
         <div class="r bar-right"><a href="/index.php?tpl=rss">RSS</a>&nbsp;<a href="/" >XML</a></div>
@@ -10,7 +29,6 @@
 <div class="top-head">
     <div class="marauto">
         <a href="/" class="l web-logo">
-            <!-- <img border="0" alt="手赚汇-手机赚钱软件分享平台，手赚app排行，手赚网" src="{dede:global.cfg_templets_skin/}/picture/5c77e0ab6802a.png" /></a> -->
             <img border="0" style="height: 70px;" alt="手赚汇-手机赚钱软件分享平台，手赚app排行，手赚网" src="{dede:global.cfg_templets_skin/}/images/logo.png" /></a>
         <ul class="r head-seach">
             <li class="seach-bar">
@@ -48,4 +66,4 @@
 </li>
 </ul>
 </div>      
-</div>
+</div> -->
