@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{dede:field.title/} - {dede:global.cfg_webname/} - 苹果iphone手机赚钱app试玩软件</title>
+    <meta name="keywords" content="{dede:field.keywords/}">
+    <meta name="description" content="{dede:field.description/}">
+    <script language="javascript" type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery-1.7.1.min.js"></script>
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/style.css" type="text/css" />
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/comm.js"></script>
+    <meta charset="UTF-8">
+<meta name="applicable-device" content="pc">
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/common.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/search.js"></script>
+<meta name="baidu-site-verification" content="0P3rl9eUsR" />
+<script type="text/javascript">function do_search() {var searchvalue = $("#seach-txt").val();if(searchvalue == '') {return false;}window.location.href = "/index.php?tpl=search&q=" + encodeURIComponent(searchvalue);}</script>
+</head>
+<body>
+  <div class="warp">
+    <div class="warp-top">
+        <!-- 顶部  开始-->
+        {dede:include filename="share/head.htm"/}
+        <!-- 顶部  结束-->
+        <div class="warp-content">
+        <p class="line-t-15"></p>
+        <!-- 主体内容 开始 --><!-- /app/17424.html -->
+
+        {dede:include filename="share/tuisong.htm"/}
+
+       <div class="head-locate">
+            <span>您当前位置：</span>{dede:field.typename /}-<a href="/down/17424.html"><span>{dede:field.shorttitle/}</span></a>
+        </div>
+    <div class="l body-left app-info Top_info info_L">
+    <!-- 左侧主体内容 -->
+        <div class="info">
+          <div class="img"><img src="{dede:field.litpic /}" alt="{dede:field.shorttitle/}"><h1>{dede:field.shorttitle/}</h1></div>
+          <div class="info_cent">
+            <ul>
+              <li>    
+                <span>分类：</span><p>{dede:field.typename /}</p>
+                <span>大小：</span>
+                <p>
+                    {dede:sql sql="Select data_size from `dede_addonarticle` where aid=~id~"}  
+                        [field:data_size/]
+                    {/dede:sql}
+                </p>
+              </li>
+              <li>
+                <span>浏览：</span><p><script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}&cid={dede:field name='channel'/}" type='text/javascript' language="javascript"></script></p>
+                <span>下载：</span><p>
+                  <!-- {dede:sql sql="Select download from `dede_addonarticle` where aid=~id~"}  
+                      [field:download/]
+                  {/dede:sql}次</p> -->
+                  <script src="/download.php?view=yes&id={dede:field name='id'/}" type='text/javascript' language="javascript"></script>
+              </li>
+              <li style="position:relative;">
+                <span>评分：</span>
+                <p class="level" style="position:absolute;top:10px;left:48px;">
+                  <span class="l5" style="line-height:26px"></span>
+                </p>
+                <span style="margin-left: 163px;">标签：</span><div class="lkbq"><a href="javascript:;">{dede:field.tags/}</a></div>
+              </li>
+                      </ul>
+          </div>
+        </div>
+        <div class="bq"></div>
+        <div class="btnwrap">
+        <div class="btn az_btn ">
+      <a href="/download.php?id={dede:field.id/}" rel="nofollow" target="_blank"><p style="width: 103px">进入下载</p><span></span></a>
+        <div class="ewmwrap">
+                              <div id="qrcode"></div>
+                              <script src="{dede:global.cfg_templets_skin/}/js/qrcode.min.js"></script>
+    <script>
+      var qrcode = new QRCode('qrcode', {
+        text: window.location.href,
+        width: 120,
+        height: 120,
+        colorDark : '#333',
+        colorLight : '#fff',
+        correctLevel : QRCode.CorrectLevel.M
+      });
+    </script>
+                              <p>手机扫描下载</p>
+        </div>
+        </div>                                  
+        </div>
+
+            <div class="introduce">
+              <span class="app-con-title">赚钱介绍</span>
+              <div class="in-info">
+                  {dede:sql sql="Select body from `dede_addonarticle` where aid=~id~"}  
+                      [field:body/]
+                  {/dede:sql}
+              <p class="line-t-15"></p>
+              <span class="app-con-title">赚钱截图</span><p class="line-t-15"></p>
+              <div class="scrbg">
+                  <div class="screen-img">
+
+                      <!-- {dede:pagestyle maxwidth='' pagepicnum='' ddmaxwidth='' row='' col='' value=''/}
+                      {dede:img ddimg='/uploads/allimg/190923/1-1Z923132K1.png' text='' width='256' height='454'} /uploads/allimg/190923/1-1Z923132K1.png {/dede:img}
+                      {dede:img ddimg='/uploads/allimg/190923/1-1Z923132K6.png' text='' width='256' height='454'} /uploads/allimg/190923/1-1Z923132K6.png {/dede:img}
+                      {dede:img ddimg='/uploads/allimg/190923/1-1Z923132P2.png' text='' width='256' height='454'} /uploads/allimg/190923/1-1Z923132P2.png {/dede:img} -->
+                      
+                      {dede:productimagelist}
+                        <img src="[field:imgsrc/]" width="210" height="390" alt="[field:text/]" />
+                      {/dede:productimagelist}
+                  </div>
+              </div>
+<p class="line-t-15"></p>
+</div>
+
+<p style="font-size:16px;color:tomato;margin-top:30px;">本文由手赚汇整理发布，转载请注明地址：<a href="{dede:global.cfg_basehost/}{dede:field name='arcurl'/}" class="zhuanzai" >{dede:global.cfg_basehost/}{dede:field name='arcurl'/}</a></p>
+
+{dede:include filename="share/zixun.htm"/}
+
+</div>
+    </div>
+        <!-- 左侧主体内容  结束 -->
+        <!-- 右侧主体内容  开始 -->     
+        {dede:include filename="share/right.htm"/}
+        <!-- 右侧主体内容  结束 -->     
+</div>
+    <!-- 主体内容 结束 -->
+    <p class="line-t-15"></p>
+    <div class="warp-footer">
+  <!-- 页脚 结束 -->
+    {dede:include filename="share/foot.htm"/}
+<!-- 页脚 结束  -->
+</div>
+<div class="to-top" style="display:none;"><a class="to-top-a" title="返回顶部"></a></div>
+
+<script type="text/javascript">
+$(function() { $(window).scroll(function() { var scrolltop = $(this).scrollTop(); scrolltop > 250 ? $('.to-top').show() : $('.to-top').hide(); var top = $(window).height(); $('.to-top').css({ 'top': scrolltop + top - 246 }); }); $('.to-top').on('click', function() { if(!$('body').is(":animated")) $('html,body').animate({ scrollTop: 0 }, 500); }); });
+</script>
+
+<!-- 百度统计 -->
+<script>var _hmt = _hmt || []; (function() { var hm = document.createElement("script"); hm.src = "https://hm.baidu.com/hm.js?de957b54c83b9e719c585433a621bc6d"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s); })();</script>
+
+<!-- 百度自动推送 -->
+<script>
+(function() { var bp = document.createElement('script'); var curProtocol = window.location.protocol.split(':')[0]; if(curProtocol === 'https') { bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'; } else { bp.src = 'http://push.zhanzhang.baidu.com/push.js'; } var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(bp, s); })();
+</script>
+
+</body>
+</html>
