@@ -1,144 +1,412 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{dede:field.title/} - {dede:global.cfg_webname/} - 苹果iphone手机赚钱app试玩软件</title>
-    <meta name="keywords" content="{dede:field.keywords/}">
-    <meta name="description" content="{dede:field.description/}">
-    <script language="javascript" type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery-1.7.1.min.js"></script>
-    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/style.css" type="text/css" />
-    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/comm.js"></script>
     <meta charset="UTF-8">
-<meta name="applicable-device" content="pc">
-<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/common.js"></script>
-<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/search.js"></script>
-<meta name="baidu-site-verification" content="0P3rl9eUsR" />
-<script type="text/javascript">function do_search() {var searchvalue = $("#seach-txt").val();if(searchvalue == '') {return false;}window.location.href = "/index.php?tpl=search&q=" + encodeURIComponent(searchvalue);}</script>
-</head>
-<body>
-  <div class="warp">
-    <div class="warp-top">
-        <!-- 顶部  开始-->
-        {dede:include filename="share/head.htm"/}
-        <!-- 顶部  结束-->
-        <div class="warp-content">
-        <p class="line-t-15"></p>
-        <!-- 主体内容 开始 --><!-- /app/17424.html -->
+    <meta name="applicable-device" content="pc">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>{dede:field.title/} - {dede:global.cfg_webname/}</title>
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/style.css" />
 
-        {dede:include filename="share/tuisong.htm"/}
+  </head>
+  <body><!-- /info/531.html -->
 
-       <div class="head-locate">
-            <span>您当前位置：</span>{dede:field.typename /}-<a href="/down/17424.html"><span>{dede:field.shorttitle/}</span></a>
-        </div>
-    <div class="l body-left app-info Top_info info_L">
-    <!-- 左侧主体内容 -->
-        <div class="info">
-          <div class="img"><img src="{dede:field.litpic /}" alt="{dede:field.shorttitle/}"><h1>{dede:field.shorttitle/}</h1></div>
-          <div class="info_cent">
-            <ul>
-              <li>    
-                <span>分类：</span><p>{dede:field.typename /}</p>
-                <span>大小：</span>
-                <p>
-                    {dede:sql sql="Select data_size from `dede_addonarticle` where aid=~id~"}  
-                        [field:data_size/]
-                    {/dede:sql}
-                </p>
-              </li>
-              <li>
-                <span>浏览：</span><p><script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}&cid={dede:field name='channel'/}" type='text/javascript' language="javascript"></script></p>
-                <span>下载：</span><p>
-                  <!-- {dede:sql sql="Select download from `dede_addonarticle` where aid=~id~"}  
-                      [field:download/]
-                  {/dede:sql}次</p> -->
-                  <script src="/download.php?view=yes&id={dede:field name='id'/}" type='text/javascript' language="javascript"></script>
-              </li>
-              <li style="position:relative;">
-                <span>评分：</span>
-                <p class="level" style="position:absolute;top:10px;left:48px;">
-                  <span class="l5" style="line-height:26px"></span>
-                </p>
-                <span style="margin-left: 163px;">标签：</span><div class="lkbq"><a href="javascript:;">{dede:field.tags/}</a></div>
-              </li>
-                      </ul>
-          </div>
-        </div>
-        <div class="bq"></div>
-        <div class="btnwrap">
-        <div class="btn az_btn ">
-      <a href="/download.php?id={dede:field.id/}" rel="nofollow" target="_blank"><p style="width: 103px">进入下载</p><span></span></a>
-        <div class="ewmwrap">
-                              <div id="qrcode"></div>
-                              <script src="{dede:global.cfg_templets_skin/}/js/qrcode.min.js"></script>
-    <script>
-      var qrcode = new QRCode('qrcode', {
-        text: window.location.href,
-        width: 120,
-        height: 120,
-        colorDark : '#333',
-        colorLight : '#fff',
-        correctLevel : QRCode.CorrectLevel.M
-      });
-    </script>
-                              <p>手机扫描下载</p>
-        </div>
-        </div>                                  
-        </div>
-
-            <div class="introduce">
-              <span class="app-con-title">赚钱介绍</span>
-              <div class="in-info">
-                  {dede:sql sql="Select body from `dede_addonarticle` where aid=~id~"}  
-                      [field:body/]
-                  {/dede:sql}
-              <p class="line-t-15"></p>
-              <span class="app-con-title">赚钱截图</span><p class="line-t-15"></p>
-              <div class="scrbg">
-                  <div class="screen-img">
-
-                      <!-- {dede:pagestyle maxwidth='' pagepicnum='' ddmaxwidth='' row='' col='' value=''/}
-                      {dede:img ddimg='/uploads/allimg/190923/1-1Z923132K1.png' text='' width='256' height='454'} /uploads/allimg/190923/1-1Z923132K1.png {/dede:img}
-                      {dede:img ddimg='/uploads/allimg/190923/1-1Z923132K6.png' text='' width='256' height='454'} /uploads/allimg/190923/1-1Z923132K6.png {/dede:img}
-                      {dede:img ddimg='/uploads/allimg/190923/1-1Z923132P2.png' text='' width='256' height='454'} /uploads/allimg/190923/1-1Z923132P2.png {/dede:img} -->
-                      
-                      {dede:productimagelist}
-                        <img src="[field:imgsrc/]" width="210" height="390" alt="[field:text/]" />
-                      {/dede:productimagelist}
-                  </div>
-              </div>
-<p class="line-t-15"></p>
-</div>
-
-<p style="font-size:16px;color:tomato;margin-top:30px;">本文由手赚汇整理发布，转载请注明地址：<a href="{dede:global.cfg_basehost/}{dede:field name='arcurl'/}" class="zhuanzai" >{dede:global.cfg_basehost/}{dede:field name='arcurl'/}</a></p>
-
-{dede:include filename="share/zixun.htm"/}
-
-</div>
+<!-- 顶部  开始-->
+{dede:include filename="share/head.htm"/}
+<!-- 顶部  结束-->
+    
+	<div class="full-wrap nav-pd none"></div>
+    <div class="wrap clearfix"><div class="crumb"><span>您当前位置：</span>
+            <a href="/zhuan/news/">手赚资讯</a>&nbsp;>&nbsp;			<a href="https://www.app522.com/zhuan/531.html">试客小兵，苹果赚钱，全网任务单价最高</a>
+      </div>
     </div>
-        <!-- 左侧主体内容  结束 -->
-        <!-- 右侧主体内容  开始 -->     
-        {dede:include filename="share/right.htm"/}
-        <!-- 右侧主体内容  结束 -->     
-</div>
-    <!-- 主体内容 结束 -->
-    <p class="line-t-15"></p>
-    <div class="warp-footer">
-  <!-- 页脚 结束 -->
-    {dede:include filename="share/foot.htm"/}
-<!-- 页脚 结束  -->
-</div>
-<div class="to-top" style="display:none;"><a class="to-top-a" title="返回顶部"></a></div>
+    <div class="wrap detail detail-page clearfix mb30">
+      <div class="detail-box">
+              <div class="info-wrap">
+    <div class="info-top">
+      <div class="info-left"><span>来源：<a href="/" target="_blank">手赚汇</a></span></div>
+      <div class="info-right">
+        <span>2019-03-19 </span>
+        <span>浏览：2659</span>
+        <span>分类：手赚资讯</span>
+      </div>
+    </div>
+    <h1 class="info-title">试客小兵，苹果赚钱，全网任务单价最高</h1>
+        <div class="info-con">最近很多朋友在家有超多的空闲时间，在家看NBA，打游戏，在追剧，刷抖音，和朋友出去打球，有一些朋友想出去<a href="https://www.app522.com/one/" target="_blank">赚钱</a>，但不知道有什么适合自己的工作，每天都过着似类的生活。<br />
+<br />
+小编高给大家推荐几款<a href="https://www.app522.com/" target="_blank"><a href="https://www.app522.com/" target="_blank">手机赚钱</a></a>，试客小兵App，利润高，非常适合宝妈，学生党，上班族，空闲的朋友，有了这款App不怕在家闲得无聊，首页有海量任务，收益高，新手每天动动手指，日赚几十块很容易，任务非常简单完成。<br />
+<br />
+试客小兵App下载地址：<a href="http://www.app522.com/down/17424.html">www.app522.com/down/17424.html</a><br />
+<br />
+【赚钱特点】<br />
+1.每天任务丰富单价1.8元起，全网最高<br />
+2.新用户最低8元即可提现红包<br />
+3.还有高额绑卡任务40 元左右一个任务<br />
+4.每天签到打卡会有丰富奖励<br />
+&nbsp;
+<div style="text-align:center"><img src="/upload/img/2019/03/19/5c8fc1601e67d.png" /></div>
+<br />
+试玩任务：首页任务款式多多，高收益，海量任务，单价任务1元起，点击任务，按照要去，领取奖励，任务非常容易完成，每天下午16.00左右会有更多的试玩任务等着你。<br />
+&nbsp;
+<div style="text-align:center"><img src="/upload/img/2019/03/19/5c8fc16718c4d.png" /></div>
+<br />
+邀请好友赚钱：嫌自己赚的不够多可以邀请好友一起<a href="https://www.app522.com/down/ios/	" target="_blank"><a href="https://www.app522.com/down/ios/	" target="_blank">试玩赚钱</a></a>，把邀请链接https://shike.com/i/UTfIzBE发送到微信等等好友，注册应用，奖励丰富，利润高，好友试玩，获得奖励，每邀请1位好友最高奖励10元，赶快邀请好友一起加入试客小兵，一起赚嗨天！<br />
+<br />
+试客小兵App下载地址：<a href="http://www.app522.com/down/17424.html">www.app522.com/down/17424.html</a><br />
+&nbsp;
+<div style="text-align:center"><img src="/upload/img/2019/03/19/5c8fc16d89a51.png" /></div>
+<br />
+试客小兵提现门槛超低8元即可提现，推荐微信钱包提现，无需手续费，工作日秒到账！！！</div>
+<p class="post-tag">标签：<a href="javascript:;">苹果赚钱</a></p>
+<div class="live-info xu">
+上一篇：<a title="赏乐帮:利用空闲时间，月入数百元的手机兼职神器"
+ class="orangelink" href="/zhuan/530.html">赏乐帮:利用空闲时间，月入数百元的手机兼职神器</a></div>
+<div class="live-info">下一篇： <a title="pp红包，苹果试玩怎么赚钱？pp红包新手赚钱攻略"
+ class="orangelink" href="/zhuan/532.html">pp红包，苹果试玩怎么赚钱？pp红包新手赚钱攻略</a></div>
+<p style="font-size:16px;color:tomato;margin-top:30px;">本文由手赚汇整理发布，转载请注明地址：<a href="https://www.app522.com/zhuan/531.html" class="zhuanzai" >https://www.app522.com/zhuan/531.html</a></p>
+ <div class="other_title">手赚资讯</div>
+                <div class="xgyd_list">
+                    <ul class="clearfix"><li><a href="/zhuan/606.html" target="_blank" title="聊赚吧：让您梦想启航，让社交模式更有价值"><em>聊赚吧：让您梦想启航，让社交模式更有价值</em></a></li><li><a href="/zhuan/605.html" target="_blank" title="试玩纪：东半球最好的手机试玩，任务多 到账快"><em>试玩纪：东半球最好的手机试玩，任务多 到账快</em></a></li><li><a href="/zhuan/531.html" target="_blank" title="试客小兵，苹果赚钱，全网任务单价最高"><em>试客小兵，苹果赚钱，全网任务单价最高</em></a></li><li><a href="/zhuan/604.html" target="_blank" title="赚钱呗，安卓免费发悬赏，月赚上千"><em>赚钱呗，安卓免费发悬赏，月赚上千</em></a></li><li><a href="/zhuan/545.html" target="_blank" title="糖果猫，苹果赚钱用户的最爱，收徒奖励无上限"><em>糖果猫，苹果赚钱用户的最爱，收徒奖励无上限</em></a></li><li><a href="/zhuan/555.html" target="_blank" title="赚钱宝，苹果手机在家就可以兼职赚钱的平台"><em>赚钱宝，苹果手机在家就可以兼职赚钱的平台</em></a></li><li><a href="/zhuan/575.html" target="_blank" title="苹果手机赚钱哪个好？蜜蜂试玩轻松日赚100元"><em>苹果手机赚钱哪个好？蜜蜂试玩轻松日赚100元</em></a></li><li><a href="/zhuan/603.html" target="_blank" title="玩家享赚，玩游戏赚钱日赚100，每天轻松提现"><em>玩家享赚，玩游戏赚钱日赚100，每天轻松提现</em></a></li><li><a href="/zhuan/602.html" target="_blank" title="乐转正式上线了，发圈 发群 收徒，三大盈利模式"><em>乐转正式上线了，发圈 发群 收徒，三大盈利模式</em></a></li><li><a href="/zhuan/601.html" target="_blank" title="特好赚app，转发赚钱高收入，在家轻松躺着赚钱"><em>特好赚app，转发赚钱高收入，在家轻松躺着赚钱</em></a></li><li><a href="/zhuan/600.html" target="_blank" title="钱大师，一个没有感情的撒钱APP"><em>钱大师，一个没有感情的撒钱APP</em></a></li><li><a href="/zhuan/599.html" target="_blank" title="赚圈圈，一款可以做任务领分红的APP"><em>赚圈圈，一款可以做任务领分红的APP</em></a></li></ul>
+                </div>
+    </div></div>
+<style>.pc-news li span{display: initial;}.pc-news li{overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}.pc-news li{height:24px;}</style>
 
-<script type="text/javascript">
-$(function() { $(window).scroll(function() { var scrolltop = $(this).scrollTop(); scrolltop > 250 ? $('.to-top').show() : $('.to-top').hide(); var top = $(window).height(); $('.to-top').css({ 'top': scrolltop + top - 246 }); }); $('.to-top').on('click', function() { if(!$('body').is(":animated")) $('html,body').animate({ scrollTop: 0 }, 500); }); });
-</script>
+<div class="detail-side">
+        <div class="app-like clearfix mt30" style="margin-top:0">
+          <h3 class="title"><i class="icon"></i>最近更新<a href="/lastupdate/1.html" class="change" target="_blank" rel="nofollow">更多</span></h3>
+          <ul class="app-main-list clearfix" id="more-like">
+                                                 <li><a class="app-icon" href="/down/17969.html" target="_blank" title="赚钱宝ios"><img src="/upload/img/2019/05/10/5cd5222c12298.png" width="70" height="70" alt="赚钱宝ios" title="赚钱宝ios"></a>
+              <a href="/down/17969.html" target="_blank" class="app-title ellipsis" title="赚钱宝ios">赚钱宝ios</a>
+            </li>
+                                   <li><a class="app-icon" href="/down/18102.html" target="_blank" title="多多转"><img src="/upload/img/2019/11/15/5dce76ba6e857.jpg" width="70" height="70" alt="多多转" title="多多转"></a>
+              <a href="/down/18102.html" target="_blank" class="app-title ellipsis" title="多多转">多多转</a>
+            </li>
+                                   <li><a class="app-icon" href="/down/18101.html" target="_blank" title="易路发"><img src="/upload/img/2019/11/15/5dce3859c4688.jpg" width="70" height="70" alt="易路发" title="易路发"></a>
+              <a href="/down/18101.html" target="_blank" class="app-title ellipsis" title="易路发">易路发</a>
+            </li>
+                                   <li><a class="app-icon" href="/down/18100.html" target="_blank" title="玉米转"><img src="/upload/img/2019/11/13/5dcbea37628f0.jpg" width="70" height="70" alt="玉米转" title="玉米转"></a>
+              <a href="/down/18100.html" target="_blank" class="app-title ellipsis" title="玉米转">玉米转</a>
+            </li>
+                                   <li><a class="app-icon" href="/down/18099.html" target="_blank" title="玉兔网"><img src="/upload/img/2019/11/13/5dcb9c2d8462e.png" width="70" height="70" alt="玉兔网" title="玉兔网"></a>
+              <a href="/down/18099.html" target="_blank" class="app-title ellipsis" title="玉兔网">玉兔网</a>
+            </li>
+                                   <li><a class="app-icon" href="/down/18098.html" target="_blank" title="大象阅读"><img src="/upload/img/2019/11/12/5dca9e8739682.png" width="70" height="70" alt="大象阅读" title="大象阅读"></a>
+              <a href="/down/18098.html" target="_blank" class="app-title ellipsis" title="大象阅读">大象阅读</a>
+            </li>
+                                   <li><a class="app-icon" href="/down/18097.html" target="_blank" title="试玩纪ios"><img src="/upload/img/2019/11/12/5dca97b3864a4.png" width="70" height="70" alt="试玩纪ios" title="试玩纪ios"></a>
+              <a href="/down/18097.html" target="_blank" class="app-title ellipsis" title="试玩纪ios">试玩纪ios</a>
+            </li>
+                                   <li><a class="app-icon" href="/down/18096.html" target="_blank" title="赚钱呗"><img src="/upload/img/2019/11/12/5dca9378e0cfe.png" width="70" height="70" alt="赚钱呗" title="赚钱呗"></a>
+              <a href="/down/18096.html" target="_blank" class="app-title ellipsis" title="赚钱呗">赚钱呗</a>
+            </li>
+                                   <li><a class="app-icon" href="/down/17751.html" target="_blank" title="秒赚大钱ios"><img src="/upload/img/2018/12/03/5c040290cc4de.png" width="70" height="70" alt="秒赚大钱ios" title="秒赚大钱ios"></a>
+              <a href="/down/17751.html" target="_blank" class="app-title ellipsis" title="秒赚大钱ios">秒赚大钱ios</a>
+            </li>
+                                 </ul>
+        </div>
+  <div class="good-applist block-tabs mt30">
+          <div class="tab-title"><span class="active">安卓赚钱</span><span data-pos="payAppList">苹果赚钱</span></div>
+          <div class="tab-content">
+                         <ul class="app-top-list clearfix">
+                             <li><span class="num">1</span>
+                <div class="app-box fl">
+                  <a href="/down/17975.html" target="_blank" class="app-icon fl" title="小龙赚钱"><img src="/upload/img/2019/05/24/5ce7bce2aa77a.png" width="56" height="56" title="小龙赚钱" alt="小龙赚钱"></a>
+                  <div class="app-info fl">
+                    <a href="/down/17975.html" target="_blank" class="app-title ellipsis" title="小龙赚钱">小龙赚钱</a>
+                    <p class="app-downs ellipsis" title="24763次下载">24763次下载</p>
+                  </div>
+                  <a href="/down/17975.html" class="app-info-down">下载</a>
+                </div>
+              </li>
+                            <li><span class="num">1</span>
+                <div class="app-box fl">
+                  <a href="/down/17496.html" target="_blank" class="app-icon fl" title="每日赚点"><img src="/upload/img/2017/01/08/5872592822ef8.jpg" width="56" height="56" title="每日赚点" alt="每日赚点"></a>
+                  <div class="app-info fl">
+                    <a href="/down/17496.html" target="_blank" class="app-title ellipsis" title="每日赚点">每日赚点</a>
+                    <p class="app-downs ellipsis" title="65286次下载">65286次下载</p>
+                  </div>
+                  <a href="/down/17496.html" class="app-info-down">下载</a>
+                </div>
+              </li>
+                            <li><span class="num">1</span>
+                <div class="app-box fl">
+                  <a href="/down/17562.html" target="_blank" class="app-icon fl" title="惠头条"><img src="/upload/img/2018/10/19/5bc9f064e38ba.png" width="56" height="56" title="惠头条" alt="惠头条"></a>
+                  <div class="app-info fl">
+                    <a href="/down/17562.html" target="_blank" class="app-title ellipsis" title="惠头条">惠头条</a>
+                    <p class="app-downs ellipsis" title="17949次下载">17949次下载</p>
+                  </div>
+                  <a href="/down/17562.html" class="app-info-down">下载</a>
+                </div>
+              </li>
+                            <li><span class="num">1</span>
+                <div class="app-box fl">
+                  <a href="/down/17780.html" target="_blank" class="app-icon fl" title="手赚咖"><img src="/upload/img/2018/06/04/5b15531078ab0.png" width="56" height="56" title="手赚咖" alt="手赚咖"></a>
+                  <div class="app-info fl">
+                    <a href="/down/17780.html" target="_blank" class="app-title ellipsis" title="手赚咖">手赚咖</a>
+                    <p class="app-downs ellipsis" title="17307次下载">17307次下载</p>
+                  </div>
+                  <a href="/down/17780.html" class="app-info-down">下载</a>
+                </div>
+              </li>
+                            <li><span class="num">1</span>
+                <div class="app-box fl">
+                  <a href="/down/17831.html" target="_blank" class="app-icon fl" title="星球联盟"><img src="/upload/img/2018/08/31/5b8956643c622.png" width="56" height="56" title="星球联盟" alt="星球联盟"></a>
+                  <div class="app-info fl">
+                    <a href="/down/17831.html" target="_blank" class="app-title ellipsis" title="星球联盟">星球联盟</a>
+                    <p class="app-downs ellipsis" title="41920次下载">41920次下载</p>
+                  </div>
+                  <a href="/down/17831.html" class="app-info-down">下载</a>
+                </div>
+              </li>
+                            <li><span class="num">1</span>
+                <div class="app-box fl">
+                  <a href="/down/17934.html" target="_blank" class="app-icon fl" title="葫芦星球"><img src="/upload/img/2019/03/30/5c9e49f13ff63.png" width="56" height="56" title="葫芦星球" alt="葫芦星球"></a>
+                  <div class="app-info fl">
+                    <a href="/down/17934.html" target="_blank" class="app-title ellipsis" title="葫芦星球">葫芦星球</a>
+                    <p class="app-downs ellipsis" title="14259次下载">14259次下载</p>
+                  </div>
+                  <a href="/down/17934.html" class="app-info-down">下载</a>
+                </div>
+              </li>
+                          </ul>
+            
+                         <ul class="app-top-list clearfix none">
+                             <li><span class="num">1</span>
+                <div class="app-box fl">
+                  <a href="/down/17901.html" target="_blank" class="app-icon fl" title="多玩红包ios"><img src="/upload/img/2018/12/04/5c06435f7c39b.png" width="56" height="56" title="多玩红包ios" alt="多玩红包ios"></a>
+                  <div class="app-info fl">
+                    <a href="/down/17901.html" target="_blank" class="app-title ellipsis" title="多玩红包ios">多玩红包ios</a>
+                    <p class="app-downs ellipsis" title="50610次下载">50610次下载</p>
+                  </div>
+                  <a href="/down/17901.html" class="app-info-down">下载</a>
+                </div>
+              </li>
+                            <li><span class="num">1</span>
+                <div class="app-box fl">
+                  <a href="/down/17758.html" target="_blank" class="app-icon fl" title="蜜蜂试玩ios"><img src="/upload/img/2018/05/16/5afc2f55adb4f.jpg" width="56" height="56" title="蜜蜂试玩ios" alt="蜜蜂试玩ios"></a>
+                  <div class="app-info fl">
+                    <a href="/down/17758.html" target="_blank" class="app-title ellipsis" title="蜜蜂试玩ios">蜜蜂试玩ios</a>
+                    <p class="app-downs ellipsis" title="69096次下载">69096次下载</p>
+                  </div>
+                  <a href="/down/17758.html" class="app-info-down">下载</a>
+                </div>
+              </li>
+                            <li><span class="num">1</span>
+                <div class="app-box fl">
+                  <a href="/down/17678.html" target="_blank" class="app-icon fl" title="狐狸赚ios"><img src="/upload/img/2018/01/18/5a609147e3957.png" width="56" height="56" title="狐狸赚ios" alt="狐狸赚ios"></a>
+                  <div class="app-info fl">
+                    <a href="/down/17678.html" target="_blank" class="app-title ellipsis" title="狐狸赚ios">狐狸赚ios</a>
+                    <p class="app-downs ellipsis" title="10592次下载">10592次下载</p>
+                  </div>
+                  <a href="/down/17678.html" class="app-info-down">下载</a>
+                </div>
+              </li>
+                            <li><span class="num">1</span>
+                <div class="app-box fl">
+                  <a href="/down/17846.html" target="_blank" class="app-icon fl" title="火箭试玩ios"><img src="/upload/img/2018/09/19/5ba23ee600951.jpg" width="56" height="56" title="火箭试玩ios" alt="火箭试玩ios"></a>
+                  <div class="app-info fl">
+                    <a href="/down/17846.html" target="_blank" class="app-title ellipsis" title="火箭试玩ios">火箭试玩ios</a>
+                    <p class="app-downs ellipsis" title="57775次下载">57775次下载</p>
+                  </div>
+                  <a href="/down/17846.html" class="app-info-down">下载</a>
+                </div>
+              </li>
+                            <li><span class="num">1</span>
+                <div class="app-box fl">
+                  <a href="/down/17790.html" target="_blank" class="app-icon fl" title="巨宝朋ios"><img src="/upload/img/2018/12/06/5c08a32788abf.jpg" width="56" height="56" title="巨宝朋ios" alt="巨宝朋ios"></a>
+                  <div class="app-info fl">
+                    <a href="/down/17790.html" target="_blank" class="app-title ellipsis" title="巨宝朋ios">巨宝朋ios</a>
+                    <p class="app-downs ellipsis" title="84138次下载">84138次下载</p>
+                  </div>
+                  <a href="/down/17790.html" class="app-info-down">下载</a>
+                </div>
+              </li>
+                            <li><span class="num">1</span>
+                <div class="app-box fl">
+                  <a href="/down/17750.html" target="_blank" class="app-icon fl" title="钱脉ios"><img src="/upload/img/2018/05/13/5af806624d951.jpg" width="56" height="56" title="钱脉ios" alt="钱脉ios"></a>
+                  <div class="app-info fl">
+                    <a href="/down/17750.html" target="_blank" class="app-title ellipsis" title="钱脉ios">钱脉ios</a>
+                    <p class="app-downs ellipsis" title="44384次下载">44384次下载</p>
+                  </div>
+                  <a href="/down/17750.html" class="app-info-down">下载</a>
+                </div>
+              </li>
+                          </ul>
+          </div>
+                      </div>
 
-<!-- 百度统计 -->
-<script>var _hmt = _hmt || []; (function() { var hm = document.createElement("script"); hm.src = "https://hm.baidu.com/hm.js?de957b54c83b9e719c585433a621bc6d"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s); })();</script>
+  <div class="good-applist block-tabs mt30">
+          <div class="tab-title"><span class="active">阅读头条</span><span data-pos="payAppList">转发赚钱</span></div>
+          <div class="tab-content">
+                         <ul class="app-top-list clearfix">
+                             <li><span class="num">1</span>
+                <div class="app-box fl">
+                  <a href="/down/17566.html" target="_blank" class="app-icon fl" title="东方头条"><img src="/upload/img/2017/08/12/598efbfb494f3.png" width="56" height="56" title="东方头条" alt="东方头条"></a>
+                  <div class="app-info fl">
+                    <a href="/down/17566.html" target="_blank" class="app-title ellipsis" title="东方头条">东方头条</a>
+                    <p class="app-downs ellipsis" title="2819次下载">2819次下载</p>
+                  </div>
+                  <a href="/down/17566.html" class="app-info-down">下载</a>
+                </div>
+              </li>
+                            <li><span class="num">1</span>
+                <div class="app-box fl">
+                  <a href="/down/17564.html" target="_blank" class="app-icon fl" title="淘新闻"><img src="/upload/img/2018/12/16/5c15d9f5be9f5.png" width="56" height="56" title="淘新闻" alt="淘新闻"></a>
+                  <div class="app-info fl">
+                    <a href="/down/17564.html" target="_blank" class="app-title ellipsis" title="淘新闻">淘新闻</a>
+                    <p class="app-downs ellipsis" title="2216次下载">2216次下载</p>
+                  </div>
+                  <a href="/down/17564.html" class="app-info-down">下载</a>
+                </div>
+              </li>
+                            <li><span class="num">1</span>
+                <div class="app-box fl">
+                  <a href="/down/17666.html" target="_blank" class="app-icon fl" title="百姓头条"><img src="/upload/img/2017/12/26/5a4252e6485eb.png" width="56" height="56" title="百姓头条" alt="百姓头条"></a>
+                  <div class="app-info fl">
+                    <a href="/down/17666.html" target="_blank" class="app-title ellipsis" title="百姓头条">百姓头条</a>
+                    <p class="app-downs ellipsis" title="6543次下载">6543次下载</p>
+                  </div>
+                  <a href="/down/17666.html" class="app-info-down">下载</a>
+                </div>
+              </li>
+                            <li><span class="num">1</span>
+                <div class="app-box fl">
+                  <a href="/down/17562.html" target="_blank" class="app-icon fl" title="惠头条"><img src="/upload/img/2018/10/19/5bc9f064e38ba.png" width="56" height="56" title="惠头条" alt="惠头条"></a>
+                  <div class="app-info fl">
+                    <a href="/down/17562.html" target="_blank" class="app-title ellipsis" title="惠头条">惠头条</a>
+                    <p class="app-downs ellipsis" title="17949次下载">17949次下载</p>
+                  </div>
+                  <a href="/down/17562.html" class="app-info-down">下载</a>
+                </div>
+              </li>
+                            <li><span class="num">1</span>
+                <div class="app-box fl">
+                  <a href="/down/17408.html" target="_blank" class="app-icon fl" title="趣头条"><img src="/upload/img/2016/06/11/575be6717ba34.png" width="56" height="56" title="趣头条" alt="趣头条"></a>
+                  <div class="app-info fl">
+                    <a href="/down/17408.html" target="_blank" class="app-title ellipsis" title="趣头条">趣头条</a>
+                    <p class="app-downs ellipsis" title="16095次下载">16095次下载</p>
+                  </div>
+                  <a href="/down/17408.html" class="app-info-down">下载</a>
+                </div>
+              </li>
+                            <li><span class="num">1</span>
+                <div class="app-box fl">
+                  <a href="/down/17554.html" target="_blank" class="app-icon fl" title="搜狐资讯"><img src="/upload/img/2017/07/20/597053672e315.png" width="56" height="56" title="搜狐资讯" alt="搜狐资讯"></a>
+                  <div class="app-info fl">
+                    <a href="/down/17554.html" target="_blank" class="app-title ellipsis" title="搜狐资讯">搜狐资讯</a>
+                    <p class="app-downs ellipsis" title="4542次下载">4542次下载</p>
+                  </div>
+                  <a href="/down/17554.html" class="app-info-down">下载</a>
+                </div>
+              </li>
+                          </ul>
+            
+                         <ul class="app-top-list clearfix none">
+                             <li><span class="num">1</span>
+                <div class="app-box fl">
+                  <a href="/down/17904.html" target="_blank" class="app-icon fl" title="蜜桃转"><img src="/upload/img/2018/12/06/5c08d3a478c46.png" width="56" height="56" title="蜜桃转" alt="蜜桃转"></a>
+                  <div class="app-info fl">
+                    <a href="/down/17904.html" target="_blank" class="app-title ellipsis" title="蜜桃转">蜜桃转</a>
+                    <p class="app-downs ellipsis" title="3819次下载">3819次下载</p>
+                  </div>
+                  <a href="/down/17904.html" class="app-info-down">下载</a>
+                </div>
+              </li>
+                            <li><span class="num">1</span>
+                <div class="app-box fl">
+                  <a href="/down/17912.html" target="_blank" class="app-icon fl" title="多米资讯"><img src="/upload/img/2018/12/16/5c165fdd3b54a.png" width="56" height="56" title="多米资讯" alt="多米资讯"></a>
+                  <div class="app-info fl">
+                    <a href="/down/17912.html" target="_blank" class="app-title ellipsis" title="多米资讯">多米资讯</a>
+                    <p class="app-downs ellipsis" title="2541次下载">2541次下载</p>
+                  </div>
+                  <a href="/down/17912.html" class="app-info-down">下载</a>
+                </div>
+              </li>
+                            <li><span class="num">1</span>
+                <div class="app-box fl">
+                  <a href="/down/17889.html" target="_blank" class="app-icon fl" title="水蜜桃"><img src="/upload/img/2018/11/16/5bee69fc209d8.jpg" width="56" height="56" title="水蜜桃" alt="水蜜桃"></a>
+                  <div class="app-info fl">
+                    <a href="/down/17889.html" target="_blank" class="app-title ellipsis" title="水蜜桃">水蜜桃</a>
+                    <p class="app-downs ellipsis" title="1993次下载">1993次下载</p>
+                  </div>
+                  <a href="/down/17889.html" class="app-info-down">下载</a>
+                </div>
+              </li>
+                            <li><span class="num">1</span>
+                <div class="app-box fl">
+                  <a href="/down/17867.html" target="_blank" class="app-icon fl" title="涨分王春"><img src="/upload/img/2018/10/18/5bc8a84e72041.jpg" width="56" height="56" title="涨分王春" alt="涨分王春"></a>
+                  <div class="app-info fl">
+                    <a href="/down/17867.html" target="_blank" class="app-title ellipsis" title="涨分王春">涨分王春</a>
+                    <p class="app-downs ellipsis" title="1829次下载">1829次下载</p>
+                  </div>
+                  <a href="/down/17867.html" class="app-info-down">下载</a>
+                </div>
+              </li>
+                            <li><span class="num">1</span>
+                <div class="app-box fl">
+                  <a href="/down/17832.html" target="_blank" class="app-icon fl" title="快玩转"><img src="/upload/img/2018/09/01/5b8a9dfcd6db1.jpg" width="56" height="56" title="快玩转" alt="快玩转"></a>
+                  <div class="app-info fl">
+                    <a href="/down/17832.html" target="_blank" class="app-title ellipsis" title="快玩转">快玩转</a>
+                    <p class="app-downs ellipsis" title="4085次下载">4085次下载</p>
+                  </div>
+                  <a href="/down/17832.html" class="app-info-down">下载</a>
+                </div>
+              </li>
+                            <li><span class="num">1</span>
+                <div class="app-box fl">
+                  <a href="/down/17822.html" target="_blank" class="app-icon fl" title="转小喵"><img src="/upload/img/2018/08/10/5b6d58b0cb27e.jpg" width="56" height="56" title="转小喵" alt="转小喵"></a>
+                  <div class="app-info fl">
+                    <a href="/down/17822.html" target="_blank" class="app-title ellipsis" title="转小喵">转小喵</a>
+                    <p class="app-downs ellipsis" title="5155次下载">5155次下载</p>
+                  </div>
+                  <a href="/down/17822.html" class="app-info-down">下载</a>
+                </div>
+              </li>
+                          </ul>
+          </div>
+                      </div>
+  </div>
+    </div>
+    <!-- 百度自动推送 -->
+<script src="/templates/pc/js/jquery-1.8.2.min.js"></script>
+<script src="/templates/pc/js/app-362bdc1aad.js"></script>
+<script src="/templates/pc/js/common-4039103f0e.js"></script>
 
-<!-- 百度自动推送 -->
 <script>
-(function() { var bp = document.createElement('script'); var curProtocol = window.location.protocol.split(':')[0]; if(curProtocol === 'https') { bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'; } else { bp.src = 'http://push.zhanzhang.baidu.com/push.js'; } var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(bp, s); })();
-</script>
+var $xiTong=$('.xitong').attr('value');if($xiTong=='0'){$('.xitong').html('安卓')}else if($xiTong=='1'){$('.xitong').html('苹果')}else{$('.xitong').html('安卓 / 苹果')};
 
-</body>
-</html>
+//百度提交
+(function(){ var bp = document.createElement('script'); var curProtocol = window.location.protocol.split(':')[0]; if (curProtocol === 'https') { bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'; } else { bp.src = 'http://push.zhanzhang.baidu.com/push.js'; } var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(bp, s); })();
+
+//百度统计
+var _hmt = _hmt || []; (function() { var hm = document.createElement("script"); hm.src = "https://hm.baidu.com/hm.js?de957b54c83b9e719c585433a621bc6d"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s); })(); 
+
+//推荐位序号
+               $(function(){$('.app-top-list').each(function(i){$(this).addClass('ul-list-'+(++i))});
+                $appSpan1=$('.ul-list-1').find('span');
+                $appSpan2=$('.ul-list-2').find('span');
+                $appSpan3=$('.ul-list-3').find('span');
+                $appSpan4=$('.ul-list-4').find('span');
+    $appSpan1.each(function(i){$(this).text(i+1)});
+                $appSpan2.each(function(i){$(this).text(i+1)});
+                $appSpan3.each(function(i){$(this).text(i+1)});
+                $appSpan4.each(function(i){$(this).text(i+1)});
+    $appSpan1.each(function(i){$(this).addClass('icon-top-'+ (++i));})
+                $appSpan2.each(function(i){$(this).addClass('icon-top-'+ (++i));})
+                $appSpan3.each(function(i){$(this).addClass('icon-top-'+ (++i));})
+                $appSpan4.each(function(i){$(this).addClass('icon-top-'+ (++i));})
+      })
+      </script>
+
+<div class="wrap clearfix mt30"><div class="topic-content block-tab">
+<div class="tab-title"><span>友情链接</span></div>
+</div></div>
+<div class="link-wrap"><div class="footer-link" style="padding: 0 20px;"><a href="https://www.app522.com/down/17737.html" target="_blank">蝉试客</a><a href="https://www.app522.com/down/ios/" target="_blank">试玩赚钱</a><a href="https://www.app522.com/down/17969.html" target="_blank">赚钱宝</a><a href="https://www.app522.com/down/17828.html" target="_blank">糖果猫</a><a href="https://www.app522.com/down/17468.html" target="_blank">懒猫试玩</a><a href="https://www.app522.com/down/17758.html" target="_blank">蜜蜂试玩</a><a href="https://www.app522.com/down/17751.html" target="_blank">秒赚大钱</a><a href="https://www.app522.com/down/17610.html" target="_blank">内涵红包</a></div></div>
+      <div class="footer">
+        <ul>
+<li>欢迎访问 <a href="/">手赚汇</a></li>
+<li>手赚汇手赚网是一个专业的手机赚钱软件分享平台，靠谱的手机赚钱软件排行榜，提供热门的手机赚钱app，以及网上赚钱项目分享，网上兼职赚钱教程方法。</li>
+<li>Copyright © 2014-2019手赚汇</li><li>粤ICP备15032210号</li>
+<li><a href="/sitemap.html" target="_blank">网站地图</a></li><li><a href="/index.php?tpl=rss" >RSS</a></li><li><a href="/sitemap.xml" >XML</a></li>
+<li>站长微信：Jun660660</li><li>手赚应用，随手可得。</li>
+        </ul>
+              </body></html>
