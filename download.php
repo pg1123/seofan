@@ -5,7 +5,6 @@ $id = $_GET['id'];
 $view = $_GET['view'];
 if(!isset($id) || empty($id)) exit;
 
-
 if($view == 'yes') {
     $rows = $dsql->GetOne("select download from dede_addonarticle where aid='".$id."'");
     echo "document.write('".$rows['download']."');\r\n";
@@ -21,7 +20,7 @@ $count = $dsql->GetTotalRow();
 $dateTime = date("Y-m-d H:i:s" ,time());
 
 if($count==0){ //如果没有记录
-
+    
     $dsql->ExecuteNoneQuery("update dede_addonarticle set download=download+1 where aid='$id'; ");//写入赞数
     
     $dsql->ExecuteNoneQuery("insert into dede_download (aid,ip,date_time) values ('$id','$ip', '$dateTime'); ");//写入IP,及被赞的AID
